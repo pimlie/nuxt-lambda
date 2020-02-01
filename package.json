@@ -28,6 +28,7 @@
     "klaw": "^3.0.0",
     "serverless-http": "^2.3.0",
     "temp": "^0.9.1",
+    "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2",
     "webpack-plugin-replace": "^1.2.0"
   },
