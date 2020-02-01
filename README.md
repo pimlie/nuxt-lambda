@@ -46,15 +46,15 @@ You can add a `lambda` section in your nuxt.config with the following properties
 
 - `name` (default: _nuxt_)
 
-The name of your lambda, ie the zip will be named `<name>.zip`
+The name of your lambda, ie the zip will be named `<name>.zip`. Dont change this for now if you want to run the test-lambda command
 
 - `dist` (default: _lambda_)
 
-The name of the folder where the intermediates for the lambda build are saved
+The name of the folder where the intermediates for the lambda build are saved (dont use nuxt's buildDir)
 
 - `spa` (default: _false_)
 
-This is intended to be an override when you are using universal mode but have some single pages running as SPA. In essence it will _not_ optimize the lambda
+This is intended to be an override when you are using universal mode but have some single pages running as SPA. In essence it will _not_ optimize the lambda by removing SPA-only features
 
 - `webpack` (default: _null_)
 
