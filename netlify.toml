@@ -1,0 +1,14 @@
+[build]
+  command = "./bin/lambda.js example"
+  functions = "example/dist"
+  publish = "example/.nuxt/dist/client"
+
+[[redirects]]
+  from = "/_nuxt/*"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/nuxt"
+  status = 200
