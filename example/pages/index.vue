@@ -3,7 +3,7 @@
     <h1>Hi from {{ name }}!</h1>
 
     <figure>
-      <img src="/_static/logo.png" />
+      <img src="/nuxt-icon.png" style="height: 50px" />
 
       <figcaption>
         <nuxt-link to="/about">About</nuxt-link>

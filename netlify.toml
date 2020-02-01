@@ -1,12 +1,7 @@
 [build]
-  command = "./bin/lambda.js example"
+  command = "yarn build"
   functions = "example/dist"
-  publish = "example/.nuxt/dist/client"
-
-[[redirects]]
-  from = "/_nuxt/*"
-  to = "/:splat"
-  status = 200
+  publish = "example/dist-static"
 
 [[redirects]]
   from = "/*"

@@ -60,7 +60,7 @@ Temporary Items
 .apdisk
 CHANGELOG.md
 
-example/dist
+example/dist*
 example/lambda
 
 # Local Netlify folder

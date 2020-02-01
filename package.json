@@ -8,9 +8,7 @@
   ],
   "scripts": {
     "build": "scripts/build.sh",
-    "dev": "rm lambda-zip -Rf; yarn build; cd lambda-zip/; unzip nuxt.zip; cd -",
-    "lint": "eslint --ext .js .",
-    "serve": "netlify-lambda --port 8999 --config webpack.config.js serve lambda"
+    "lint": "eslint --ext .js ."
   },
   "bin": {
     "nuxt-lambda": "bin/lambda.js",
