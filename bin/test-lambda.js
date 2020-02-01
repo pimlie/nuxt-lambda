@@ -15,6 +15,11 @@ async function main () {
     rootDir = '.'
   }
 
+  // change to rootDir
+  // otherwise __dirname in the lambda config doesnt resolve correctly
+  rootDir = path.resolve(rootDir)
+  process.chdir(rootDir)
+
   const tmpDir = await createTmpDir('nuxt-lambda')
   consola.info(`---- EXTRACTING ZIP INTO ${tmpDir} ----`)
 

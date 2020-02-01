@@ -62,3 +62,6 @@ CHANGELOG.md
 
 example/dist
 example/lambda
+
+# Local Netlify folder
+.netlify
