@@ -1,0 +1,48 @@
+{
+  "name": "nuxt-lambda",
+  "description": "Nuxt.js command to quickly & easily create an optimized lambda",
+  "repository": "pimlie/nuxt-lambda",
+  "license": "MIT",
+  "contributors": [
+    "Pim (@pimlie)"
+  ],
+  "scripts": {
+    "build": "scripts/build.sh",
+    "dev": "rm lambda-zip -Rf; yarn build; cd lambda-zip/; unzip nuxt.zip; cd -",
+    "lint": "eslint --ext .js .",
+    "serve": "netlify-lambda --port 8999 --config webpack.config.js serve lambda"
+  },
+  "bin": {
+    "nuxt-lambda": "bin/lambda.js",
+    "test-lambda": "bin/test-lambda.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@netlify/zip-it-and-ship-it": "^0.3.1",
+    "fs-extra": "^8.1.0",
+    "jszip": "^3.2.2",
+    "klaw": "^3.0.0",
+    "serverless-http": "^2.3.0",
+    "temp": "^0.9.1",
+    "webpack-node-externals": "^1.7.2",
+    "webpack-plugin-replace": "^1.2.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/axios": "^5.8.0",
+    "@nuxtjs/eslint-config": "^2.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "nuxt": "^2.10.2",
+    "vue-uuid": "^1.1.1"
+  },
+  "peerDependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
