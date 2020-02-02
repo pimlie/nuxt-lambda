@@ -1,6 +1,6 @@
 # Nuxt command for quickly building a Nuxt.js lambda (experimental)
 
-## :warning: Optimized build by default with limited Nuxt.js functionality
+### :warning: Optimized build by default with limited Nuxt.js functionality
 
 This command will by default create a lambda for Nuxt.js SSR that is extremely optimized to run serverless. That means most non-essential Nuxt.js features have been stripped out.
 
@@ -17,7 +17,7 @@ This command will by default create a lambda for Nuxt.js SSR that is extremely o
 - turn off compression `render.compressor: false`
 - turn off etags (?) `render.etag: false`
 
-### How to use
+## How to use
 
 #### Install
 ```js
@@ -48,7 +48,7 @@ $ yarn test-lambda <rootDir?> <url path>
 // eg: yarn test-lambda /about
 ```
 
-### Rationale for using the optimized handler by default
+## Rationale for using the optimized handler by default
 
 A lambda should be very good at running a single task, ie have a single responsibility. Nuxt will by default start a connect server which is just another abstraction layer on top of a lambda. This is actually a very strong feature of why its normally so easy to develop with Nuxt.js as it greatly helps with ease of deployments. But there are many cases where you dont need this abstraction anymore or where this abstraction is just the _wrong_ approach once you start deploying serverless. Eg a common approach is to use Nuxt.js serverMiddleware's to deploy an API, but if you are deploying serverless that API should really be run in a separate lambda.
 
@@ -86,7 +86,7 @@ Eg just parsing/loading the `consola` dependency takes up to 10ms. Do we really 
 
 > This of course could break your code if you use non-standard log functions. Eg we have to set `render.ssrLog: false` because otherwise Nuxt.js will try to add a consola reporter
 
-### Options
+## Options
 
 You can add a `lambda` section in your nuxt.config with the following properties
 
@@ -110,7 +110,7 @@ This is intended to be an override when you are using universal mode but have so
 
 Any additional webpack config that is needed for your lambda build. At the moment it doesnt make really sense to touch this
 
-### TODO
+## TODO
 
 - [ ] Test which features have been broken (please report them!)
 - [ ] Make/test mode: SPA work
