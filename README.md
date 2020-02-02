@@ -1,4 +1,4 @@
-# Nuxt command for quickly building a Nuxt.js lambda (very expirimental, wip)
+# Nuxt command for quickly building a Nuxt.js lambda (experimental)
 
 ## :warning: Limited Nuxt.js functionality
 
@@ -12,8 +12,8 @@ This will create a lambda for Nuxt.js ssr that is extremely optimized to run ser
 
 ### Recommended tunables
 
-- turn of compression `render.compressor: false`
-- turn of etags (?) `render.etag: false`
+- turn off compression `render.compressor: false`
+- turn off etags (?) `render.etag: false`
 
 ### How to use
 
@@ -68,7 +68,7 @@ In general the lambda build consists of 4 steps:
 - Build Lambda and stub any Nuxt.js feature/dependencies we dont need/want
 - Create a Zip file for the lambda:
   - Start with [@netlify/zip-it-and-ship-it](https://github.com/netlify/zip-it-and-ship-it) to zip the Nuxt.js lambda and all/just its dependencies
-  - Then add all Nuxt.js resources from `<rootDir>/<buildDir>/.nuxt` to it
+  - Then add all Nuxt.js resources from `<rootDir>/<buildDir>/dist` to it
 
 ##### Is stubbing imports really a good approach?
 
