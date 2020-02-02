@@ -13,7 +13,7 @@
     "release": "yarn lint && standard-version"
   },
   "bin": {
-    "nuxt-lambda": "bin/lambda.js",
+    "nuxt-lambda": "bin/nuxt-lambda.js",
     "test-lambda": "bin/test-lambda.js"
   },
   "files": [

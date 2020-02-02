@@ -1,7 +1,7 @@
 import { VueRenderer } from '@nuxt/vue-renderer'
 import options from 'nuxt.config.js'
-import nuxtMiddleware from './middleware/nuxt' // => packages/server/src/middleware/nuxt
-import errorMiddleware from './middleware/error' // => packages/server/src/middleware/error
+import nuxtMiddleware from '../middleware/nuxt' // => packages/server/src/middleware/nuxt
+import errorMiddleware from '../middleware/error' // => packages/server/src/middleware/error
 
 const nuxt = {
   hook: () => {},
@@ -19,7 +19,7 @@ const serverContext = {
 
 const renderer = new VueRenderer(serverContext)
 
-const nuxtHandler = async (req, res) => {
+const optimizedHandler = async (req, res) => {
   if (process.env.NETLIFY) {
     if (req.url.startsWith('/.netlify/functions/nuxt')) {
       req.url = req.url.slice(24)
@@ -36,4 +36,4 @@ const nuxtHandler = async (req, res) => {
   return nuxtMiddleware({ options, nuxt, resources, renderRoute })(req, res, next)
 }
 
-export default nuxtHandler
+export default optimizedHandler
