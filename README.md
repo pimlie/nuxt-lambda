@@ -59,6 +59,8 @@ Having a single responsibility means less dependencies, less code to parse so qu
 |nuxt-lambda|1GB|~175ms|
 |nuxt-lambda|1.5GB|?|
 
+More information about AWS cold starts in this excellent article by @MikhailShilkov: [Cold Starts in AWS Lambda](https://mikhail.io/serverless/coldstarts/aws/)
+
 ### How does it work
 
 In general the lambda build consists of 4 steps:
@@ -74,15 +76,18 @@ In general the lambda build consists of 4 steps:
 
 Probably not, it would be better to fix these imports in Nuxt.js core. That might still happen, but stubbing gets us fastests to where we want to go for now. Also it will work with any Nuxt.js version and not just some future release.
 
-Eg just parsing/loading the `consola` dependency takes up to 20ms. Do we really need fancy logging in a lambda? Plain console should be good enough too, so we replace all `consola.<log-fn>` statements to `console.<log-fn>`.
+Eg just parsing/loading the `consola` dependency takes up to 10ms. Do we really need fancy logging in a lambda? Plain console should be good enough too, so we replace all `consola.<log-fn>` statements to `console.<log-fn>`.
 
-> This of course could again break your code if you use non-standard log functions. Eg we have to set `render.ssrLog: false` because otherwise Nuxt.js will try to add a consola reporter
+> This of course could break your code if you use non-standard log functions. Eg we have to set `render.ssrLog: false` because otherwise Nuxt.js will try to add a consola reporter
 
 ### TODO
 
 - [ ] Test which features have been broken (please report them!)
 - [ ] Make/test mode: SPA work
 - [ ] Add support for serverMiddleware's back by just chaining them manually?
+- [ ] (maybe) Try to pack `vue-server-renderer` in a single file (less files could be faster unzipping?)
+- [ ] (maybe) Provide Nuxt.js lambdas as AWS layers (we'd need to remove the stubbing and just use optional requires instead)
+   - Then users really only have to deploy their `.nuxt/dist` folder
 
 ### Options
 
