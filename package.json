@@ -1,5 +1,6 @@
 {
   "name": "nuxt-lambda",
+  "version": "0.1.0",
   "description": "Nuxt.js command to quickly & easily create an optimized lambda",
   "repository": "pimlie/nuxt-lambda",
   "license": "MIT",
@@ -8,7 +9,8 @@
   ],
   "scripts": {
     "build": "scripts/build.sh",
-    "lint": "eslint --ext .js ."
+    "lint": "eslint --ext .js .",
+    "release": "yarn lint && standard-version"
   },
   "bin": {
     "nuxt-lambda": "bin/lambda.js",
@@ -36,6 +38,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
     "nuxt": "^2.10.2",
+    "standard-version": "^7.1.0",
     "vue-uuid": "^1.1.1"
   },
   "peerDependencies": {
