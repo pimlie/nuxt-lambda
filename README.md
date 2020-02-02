@@ -78,7 +78,7 @@ In general the lambda build consists of 4 steps:
   - Start with [@netlify/zip-it-and-ship-it](https://github.com/netlify/zip-it-and-ship-it) to zip the Nuxt.js lambda and all/just its dependencies
   - Then add all Nuxt.js resources from `<rootDir>/<buildDir>/dist` to it
 
-##### Is stubbing imports to optimize the webpack build really a good approach?
+##### Is stubbing imports to optimize the lambda build really a good approach?
 
 Probably not, it would be better to fix these imports in Nuxt.js core. That might still happen, but stubbing gets us fastests to where we want to go for now. Also it will work with any Nuxt.js version and not just some future release.
 

@@ -4,7 +4,7 @@
 # mostly because we have to copy statoc files
 # from 2 places for static deployment
 
-./bin/lambda.js example
+./bin/nuxt-lambda.js example
 
 mkdir -p example/dist-static
 
