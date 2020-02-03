@@ -9,5 +9,5 @@
 mkdir -p example/dist-static
 
 cp -a example/static/* example/dist-static/
-cp -a example/.nuxt/dist/client example/dist-static/_nuxt
+cp -a example/.nuxt/dist/client example/dist-static/nuxt
 
