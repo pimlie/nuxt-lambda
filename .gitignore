@@ -17,11 +17,12 @@ distributions/*/LICENSE
 
 # Other
 .nuxt*
+.lambda*
 !.nuxtignore
 .cache
 
 # Dist folders
-dist
+dist*
 
 # Junit reports
 reports
@@ -58,9 +59,6 @@ coverage
 Network Trash Folder
 Temporary Items
 .apdisk
-
-example/dist*
-example/lambda
 
 # Local Netlify folder
 .netlify
