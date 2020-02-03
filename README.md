@@ -1,10 +1,13 @@
-# Nuxt command for quickly building a Nuxt.js lambda (experimental)
+# Nuxt command to create a Nuxt.js lambda (beta)
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![License][license-src]][license-href]
 
 ### :warning: Optimized build by default with limited Nuxt.js functionality
 
-This command will by default create a lambda for Nuxt.js SSR that is extremely optimized to run serverless. That means most non-essential Nuxt.js features have been stripped out.
-
 > You can disable the optimized build by setting `lambda.optimize: false` in your nuxt.config
+
+This command will by default create a lambda for Nuxt.js SSR that is extremely optimized to run serverless. That means most non-essential Nuxt.js features have been stripped out.
 
 - No connect server (it uses @nuxt/vue-renderer directly instead of going through @nuxt/server)
 - No support for runtime modules (only buildModules)
@@ -98,9 +101,13 @@ The name of your lambda, ie the zip will be named `<name>.zip`. Dont change this
 
 If _false_ a default Nuxt.js handler will be used, no optimizations at all. This means that eg a connect server will be started and you can use serverMiddleware's
 
-- `dist` (default: _lambda_)
+- `buildDir` (default: _.lambda_)
 
-The name of the folder where the intermediates for the lambda build are saved (dont use nuxt's buildDir)
+The name of the folder where the intermediates for the lambda build are saved (dont use nuxt's buildDir, config is created before nuxt build which removes the nuxt builddir). If relative then relative to _rootDir_
+
+- `distDir` (default: _dist_)
+
+The name of the folder where the zipped lambda will be saved. If relative then relative to _rootDir_
 
 - `spa` (default: _false_)
 
@@ -112,9 +119,31 @@ Any additional webpack config that is needed for your lambda build. At the momen
 
 ## TODO
 
-- [ ] Test which features have been broken (please report them!)
-- [ ] Make/test mode: SPA work
-- [ ] Add support for serverMiddleware's back by just chaining them manually?
+- [ ] (optimized handler only) Test which features have been broken (please report them!)
+- [ ] (optimized handler only) Make/test mode: SPA work
+- [ ] (optimized handler only) Add support for serverMiddleware's back by just chaining them manually?
 - [ ] (maybe) Try to pack `vue-server-renderer` in a single file (less files could be faster unzipping?)
 - [ ] (maybe) Provide Nuxt.js lambdas as AWS layers (we'd need to remove the stubbing and just use optional requires instead)
    - Then users really only have to deploy their `.nuxt/dist` folder
+
+## License
+
+[MIT License](./LICENSE)
+
+Copyright (c) pimlie
+
+<!-- Badges -->
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-lambda/latest.svg?style=flat-square
+[npm-version-href]: https://npmjs.com/package/nuxt-lambda
+
+[npm-downloads-src]: https://img.shields.io/npm/dt/nuxt-lambda.svg?style=flat-square
+[npm-downloads-href]: https://npmjs.com/package/nuxt-lambda
+
+[circle-ci-src]: https://img.shields.io/circleci/project/github/pimlie/nuxt-lambda.svg?style=flat-square
+[circle-ci-href]: https://circleci.com/gh/pimlie/nuxt-lambda
+
+[codecov-src]: https://img.shields.io/codecov/c/github/pimlie/nuxt-lambda.svg?style=flat-square
+[codecov-href]: https://codecov.io/gh/pimlie/nuxt-lambda
+
+[license-src]: https://img.shields.io/npm/l/nuxt-lambda.svg?style=flat-square
+[license-href]: https://npmjs.com/package/nuxt-lambda
