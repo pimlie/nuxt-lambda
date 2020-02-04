@@ -7,12 +7,13 @@
 
 > You can disable the optimized build by setting `lambda.optimize: false` in your nuxt.config
 
-This command will by default create a lambda for Nuxt.js SSR that is extremely optimized to run serverless. That means most non-essential Nuxt.js features have been stripped out.
+This command will by default create a lambda for Nuxt.js SSR that is extremely optimized to run serverless. That means most non-essential Nuxt.js SSR features have been stripped out.
 
 - No connect server (it uses @nuxt/vue-renderer directly instead of going through @nuxt/server)
 - No support for runtime modules (only buildModules)
 - No support for server middlewares (although we might be able to add support for this at a later time)
 - No support for serving static files (eg use Netlify if you want to deploy quickly)
+- No support for hooks
 - mode: SPA is probably broken for now (not tested, but render.shouldPrefetch/Preload are functions and we serialize with JSON.stringify)
 
 ### Recommended tunables
@@ -38,7 +39,7 @@ $ yarn nuxt-lambda <rootDir> [-c nuxt.config.js]
 // eg: yarn test-lambda src
 ```
 
-It will by default create a lambda dir in your rootDir containing the intermediates and a dist folder with the zip file you need to upload
+It will by default create a `.lambda` dir in your rootDir containing the intermediates and a `dist` folder with the zip file you need to upload
 
 #### Test the lambda
 
@@ -53,11 +54,11 @@ $ yarn test-lambda <rootDir?> <url path>
 
 ## Rationale for using the optimized handler by default
 
-A lambda should be very good at running a single task, ie have a single responsibility. Nuxt will by default start a connect server which is just another abstraction layer on top of a lambda. This is actually a very strong feature of why its normally so easy to develop with Nuxt.js as it greatly helps with ease of deployments. But there are many cases where you dont need this abstraction anymore or where this abstraction is just the _wrong_ approach once you start deploying serverless. Eg a common approach is to use Nuxt.js serverMiddleware's to deploy an API, but if you are deploying serverless that API should really be run in a separate lambda.
+A lambda should be very good at running a single task, ie have a single responsibility. Nuxt will by default start a connect server which provides a similar abstraction layer as lambdas provide. The connect server is actually a very strong feature of Nuxt.js, it helps greatly to simplify deployments. But there are also cases where you dont need this abstraction (anymore) or where this second abstraction layer is just the _wrong_ approach because you deploy serverless. Eg a common approach is to use Nuxt.js serverMiddleware's to deploy an API, but when you are deploying serverless that API should really be run in a separate lambda.
 
 ##### Why is a single responsibility important?
 
-Most important reason is cold boot performance of the lambda I guess. A lambda is started for every single request, although the lambda context might be 'warm' from a previous request there are no guarantees that its still warm. Response times/performance of your Nuxt.js website could vary greatly because of this.
+Most important/practical reason is cold boot performance of the lambda. A lambda is started for every single request, although the lambda context might be 'warm' from a previous request there are no guarantees that it will still be warm. Response times/performance of your Nuxt.js website could vary greatly because of this.
 
 Having a single responsibility means less dependencies, less code to parse so quicker cold boots:
 
@@ -74,16 +75,16 @@ More information about AWS cold starts in this excellent article by @MikhailShil
 
 In general the lambda build consists of 4 steps:
 
-- Create a preparsed/optimized nuxt.config
-- Build Nuxt.js with `standalone: true`
-- Build Lambda, if using the optimized handler (the default) stub any Nuxt.js feature/dependencies we dont need/want
+- Create a pre-normalized and optimized nuxt.config
+- Build Nuxt.js
+- Build Lambda, if using the optimized handler then stub any Nuxt.js feature/dependencies we dont need/want
 - Create a Zip file for the lambda:
   - Start with [@netlify/zip-it-and-ship-it](https://github.com/netlify/zip-it-and-ship-it) to zip the Nuxt.js lambda and all/just its dependencies
   - Then add all Nuxt.js resources from `<rootDir>/<buildDir>/dist` to it
 
 ##### Is stubbing imports to optimize the lambda build really a good approach?
 
-Probably not, it would be better to fix these imports in Nuxt.js core. That might still happen, but stubbing gets us fastests to where we want to go for now. Also it will work with any Nuxt.js version and not just some future release.
+Probably not, it would be better to fix these imports in Nuxt.js core. That might still happen, but stubbing gets us fastests to where we want to be for now. Also it will work with any Nuxt.js version and not just some future release.
 
 Eg just parsing/loading the `consola` dependency takes up to 10ms. Do we really need fancy logging in a lambda? Plain console should be good enough too, so we replace all `consola.<log-fn>` statements to `console.<log-fn>`.
 
