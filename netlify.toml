@@ -4,8 +4,8 @@
   functions = "example/dist"
   publish = "example/dist-static/"
 
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/nuxt"
-  status = 200
-  force = false
+#[[redirects]]
+#  from = "/*"
+#  to = "/.netlify/functions/nuxt"
+#  status = 200
+#  force = false
