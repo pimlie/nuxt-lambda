@@ -4,8 +4,5 @@ export default {
   ],
   plugins: [
     '~/plugins/vue-uuid.js'
-  ],
-  build: {
-    publicPath: '/nuxt/'
-  }
+  ]
 }

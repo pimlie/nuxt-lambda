@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Blog from {{ name }}</h1>
+    <h1>About from {{ name }}</h1>
     <ul>
       <li v-for="(post, index) in posts" :key="index">
         {{ post.title }}
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  async asyncData ({ app, req, params }) {
+  async asyncData ({ app }) {
     // We can return a Promise instead of calling the callback
     const data = await app.$axios.$get('https://jsonplaceholder.typicode.com/posts')
 

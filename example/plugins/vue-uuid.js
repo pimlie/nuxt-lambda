@@ -4,4 +4,4 @@ import UUID from 'vue-uuid'
 Vue.use(UUID)
 
 // eslint-disable-next-line no-console
-console.log('UUID plugin')
+console.log('UUID plugin loaded')

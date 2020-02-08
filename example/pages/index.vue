@@ -11,7 +11,7 @@
     </figure>
 
     <p>
-      <small>id: {{ uuid }}</small>
+      <small>uuid: {{ uuid }}</small>
     </p>
   </div>
 </template>
