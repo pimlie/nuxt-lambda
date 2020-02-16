@@ -3,15 +3,18 @@
 
 > :warning: The total times are measured without downloading & unzipping what normally occures on the AWS platform. Therefore these benchmarks only list _load/parse times_ and not _coldboot times_
 
+- Times are in `ms`
+- Times/memory usage are the averages of 3 runs
+
 Check the benchmark folder for details how these benchmarks are created
 
 ## Route `/`
 ### Config _base_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|132|96.5|228.5|98.2 MB|X/5O0PKb/u6YChqxA24C0g==|
-|_connect_|35.2|48.1|83.3|69.2 MB|LzL3VkMK97bkR36dtq7qKw==|
-|_minimal_|30.3|42.1|72.4|68.5 MB|yK8/awiXrlA5WAIm63k7Nw==|
+|_full_|125.3|85.3|210.6|111 MB|hH/vn//bFcbk4ZQbyeqAKQ==|
+|_connect_|34.7|45.2|79.9|70.3 MB|iKAoYkrLhAXVYREHGpHDIA==|
+|_minimal_|31.7|44.2|75.9|67.8 MB|o523CRiVsqy3x2s/4BaOZw==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
@@ -23,7 +26,7 @@ Check the benchmark folder for details how these benchmarks are created
     "content-length": "1385"
   },
   "isBase64Encoded": true,
-  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDRmNmEwZjgwLTUwZjItMTFlYS1iYTQxLWMxY2I1NmVmMGVjYjwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
+  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDYzMWY1OWIwLTUwZjUtMTFlYS1iODMwLWYxZWE2MGRlMWRkMDwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
 }
 ```
 </details>
@@ -39,7 +42,7 @@ Check the benchmark folder for details how these benchmarks are created
     "content-length": "1385"
   },
   "isBase64Encoded": true,
-  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDUyZDdiZjAwLTUwZjItMTFlYS1iYWQzLTYzMDk0NTI3ZjI1Mjwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
+  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDY4ZjEzN2YwLTUwZjUtMTFlYS05NjFmLWI5MGNlMmYwNDg2MDwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
 }
 ```
 </details>
@@ -55,7 +58,7 @@ Check the benchmark folder for details how these benchmarks are created
     "content-length": 1385
   },
   "isBase64Encoded": false,
-  "body": "<!doctype html>\n<html data-n-head-ssr>\n  <head >\n    <link rel=\"preload\" href=\"/_nuxt/456ee17ae511977d04ed.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/e838d56bed55d065bb30.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/67d174ce2a187ace0226.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/d71c1f7be4835f7dd77b.js\" as=\"script\"><style data-vue-ssr-id=\"124e288c:0\">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>\n  </head>\n  <body >\n    <div data-server-rendered=\"true\" id=\"__nuxt\"><!----><div id=\"__layout\"><div><div><h1>Hi from server!</h1> <figure><img src=\"/nuxt-icon.png\" style=\"height: 50px\"> <figcaption><a href=\"/about\">About</a></figcaption></figure> <p><small>uuid: 5510bf10-50f2-11ea-beb5-7fa8491d770d</small></p></div> <footer><small>Served by a nuxt-lambda</small></footer></div></div></div><script>window.__NUXT__={layout:\"default\",data:[{name:\"server\"}],error:null,serverRendered:true};</script><script src=\"/_nuxt/456ee17ae511977d04ed.js\" defer></script><script src=\"/_nuxt/d71c1f7be4835f7dd77b.js\" defer></script><script src=\"/_nuxt/e838d56bed55d065bb30.js\" defer></script><script src=\"/_nuxt/67d174ce2a187ace0226.js\" defer></script>\n  </body>\n</html>\n"
+  "body": "<!doctype html>\n<html data-n-head-ssr>\n  <head >\n    <link rel=\"preload\" href=\"/_nuxt/456ee17ae511977d04ed.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/e838d56bed55d065bb30.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/67d174ce2a187ace0226.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/d71c1f7be4835f7dd77b.js\" as=\"script\"><style data-vue-ssr-id=\"124e288c:0\">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>\n  </head>\n  <body >\n    <div data-server-rendered=\"true\" id=\"__nuxt\"><!----><div id=\"__layout\"><div><div><h1>Hi from server!</h1> <figure><img src=\"/nuxt-icon.png\" style=\"height: 50px\"> <figcaption><a href=\"/about\">About</a></figcaption></figure> <p><small>uuid: 6bee7260-50f5-11ea-b0a3-0907efdc57d5</small></p></div> <footer><small>Served by a nuxt-lambda</small></footer></div></div></div><script>window.__NUXT__={layout:\"default\",data:[{name:\"server\"}],error:null,serverRendered:true};</script><script src=\"/_nuxt/456ee17ae511977d04ed.js\" defer></script><script src=\"/_nuxt/d71c1f7be4835f7dd77b.js\" defer></script><script src=\"/_nuxt/e838d56bed55d065bb30.js\" defer></script><script src=\"/_nuxt/67d174ce2a187ace0226.js\" defer></script>\n  </body>\n</html>\n"
 }
 ```
 </details>
@@ -63,23 +66,23 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _with-compression_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|131.3|101|232.3|106 MB|UiFjrShM1cLsx070P3nk6w==|
-|_connect_|43.5|48.3|91.8|73.2 MB|HLAfzEohTvhYH7tnfO3lCg==|
-|_minimal_|29.7|46.6|76.3|70.3 MB|rYE3VLh8jDuzLVGRTFnt3g==|
+|_full_|126.1|100|226.1|111 MB|aL25ndKKrBizrWAk+zG0Fg==|
+|_connect_|43.2|47.1|90.3|72.1 MB|naWKprfMx65Lcw3EoLrU9A==|
+|_minimal_|31.9|47.7|79.6|68.2 MB|bCtKoAFlhWEc4AO6XITX3Q==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"569-1TJHSRVOC13h2drzlo2rCR2X0v4\"",
+    "etag": "\"569-ttvK8EwBOFtBkm6eIE2KNi++gNM\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "vary": "Accept-Encoding",
     "content-encoding": "gzip"
   },
   "isBase64Encoded": true,
-  "body": "H4sIAAAAAAAAA5VUyW7bMBC95ysY9mpakm1Zsjagt5566AIEKAqDFEcWG1kUKCqxa/jfS1IysiFNwgNXvVnePE12zWWpjx2gWu+b4iqzC+JUU9KSGignfa+KK4Qye0B2Z/aNaG+RgibHnZkl5RjVCqoce9t2OGhvFa4BgohCGASbKOL+Cvj8T48R7XPcl0p0GhdvWoF4GfNwzYCHIffXIWNL/+NW1hEPolUJCxrEES3BXyzWH7fCo6AMqojBKl6GVcR5FLGXVnp9bGBk724ASx0RPMfBYgWLOC4THxdza450Su4U9P2pk73QQrZJJQ7AUy27xE8bqLRZlNjVdq3BbRbdIb0XXNfmSna0FPqYBKlWtJ1MuEc0D/rZ9Izmqz5ltLzdKTm0nJSykSr55Pt++peIlsMh2bhxfhrV0xNp5YOT0yN/rWzhGZJUVDTATy+cKuDnzHP8ODV5Vk5uxyQ/XnTFxd3IXg/qDhRRYII00BxrNQBGlsytK4gh+5qYUTjMeN/Qoxzsi7mapjoovghUKblHo8lr4zkoUFaJ3aCgyMR+h3pVmjq7PEQp23nX7jByoeZ44h6FfnfAI66knU2/yOhFIpQ5v5/tknm0yLzHn3mTL5R1RiF72jTFMAhubDLzf2yWPgn9akGCAChhmyUjIaPLCEoWG80Yzhwi8wzYszmZGKTUoC62vtu8OGJHRJHLoaF7xukD8PK5Qz+ZR90W90YK8n6+3X79efNju81PI5EJ5lDRodF4ZmuS/Dq1dA8JHonE598zUMqUth2aZjZefpvqldhynVMTw+hh8jQx/UaPMF5duP/Bvvo3vgP7ald5B/bVXvIM6xRuhW0aqjc21n+YiuQVaQUAAA=="
+  "body": "H4sIAAAAAAAAA5VUy46bMBTdz1d43G0ccMIjAYLUXVdd9CGNVFWRwZfgDsHImJmkUf69tiGal6Yzw8K+2Jz7OPdws2suS33sANV63+RXmd0QZ5qRltTAOOl7lV8hlNkXZC1jN6K9RQqaDe7MKhnHqFZQbbC3bYeD9oIwAqAxg5DSdRxzPwA+/9NjxPoN7kslOo3zN73AarniYVQAD0PuR2FRLP2Pe4liTuOghAWjq5iV4C8W0ce98JiWtIoLCFbLsIo5j+PipZdeHxsY2bsbwFJHBN9gughgsVqViY/zuXVHOiV3Cvr+1MleaCHbpBIH4KmWXeKnDVTabErsarvX4IxFd0jvBde1OZIdK4U+JjTVirWTC3eJ5rSfTddoHvRpwcrbnZJDy0kpG6mST77vp3+JaDkckrV7zk+zevpGWvkQ5PQoXitbeIYkFRMN8NOLoAr4OfMcP05NnpWTswrJjxddcXE3steDugNFFJgkDXSDtRoAI0vm1jXEkH1NzJM7zHjesKMc7I05mpaa5l8EqpTco9HltYlMc5RVYjcoyDOx36FelabPrg5RynbetTuMXKobPHGPQr874BFXss6Wn2fsIhFWuLif7ZZ5LM+8x595UyyUdUYhe9Y0+TAInqA4WAKES5+EfhUSSoGRNY9KUvBFGK19auzScOYQmWfAnq3J5CClBnXx9d3WxVFxRAy5Ghq2Lzh7AF4+d+gn66jb/N5IQd7Pt9uvP29+bLeb00hkgjlUbGg0ntmeJL9OLdtDgkci8fn3DJQyrW2HppmNh9+mfiW2XefU5DBGmCJNTL8xI0xUl+5/sK/+je/AvjpV3oF9dZY8wzqFW2GbgeqNg/UfuZporGkFAAA="
 }
 ```
 </details>
@@ -90,14 +93,14 @@ Check the benchmark folder for details how these benchmarks are created
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"569-XwnFwTkVinmouM4aAnZ7FeA0pAw\"",
+    "etag": "\"569-ru8oVjnmNGUtyVccTz3EitF6kLo\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "vary": "Accept-Encoding",
     "content-encoding": "gzip"
   },
   "isBase64Encoded": true,
-  "body": "H4sIAAAAAAAAA5VUyW7bMBC95ysY9mpaiyVL1gb01lMPXYAARWFQ4shiI4sCRSV2Df97SUpGNqRJdCBHpN4sb54mu2aiUsceUKP2bXGVmQ0xqijpSAOUkWGQxRVCmXlBxtJ2y7tbJKHNca9XQRlGjYQ6x862Gw/KCcI1gBdRCD1vE0XMDYAt/wwY0SHHQyV5r3DxpheIVzEL1yWwMGTuOizLlftxL+uIeVFQgU+9OKIVuL6//rgXFnmVV0clBPEqrCPGoqh86WVQxxYm9u5GMNQRznLs+QH4cVwlLi6Wxh3ppdhJGIZTLwauuOiSmh+ApUr0iZu2UCu9Sb5rzN6ANfz+kN5zphp9JHpacXVMvFRJ2s0u7CVaesNivkbLYEhLWt3upBg7RirRCpl8cl03/Ut4x+CQbOxzfprV0zfSiYcgp0fxOtHBMySpKW+BnV4ElcDOmWP5sWpyjJysVQp2vOiK8buJvQHkHUgiQSepoTlWcgSMDJlb2xBN9jXRT2Ex03lLj2I0N/poXhqv+MJRLcUeTS6vdWSvQFnNd6OEIuP7HRpkpfts6+CV6JZ9t8PIpprjmXsUuv0BT7iK9qb8IqMXidDSxv1stsyhReY8/syZY6Gs1wrZ07YtxpEz7bMOaFyGLgnd2ieeB5TQ1SYiUUj9OFxrexNpziwiczTYMTXpHIRQIC++vpu6GCqPiCJbQ0v3JaMPwMvnFv1knXRb3GspiPvldvv1582P7TY/TUQmmEFNx1bhhelJ8uvU0T0keCISn38vQErd2m5s28V0+G3uV2LadU51DlOEOdLM9BszQke16f4H++rf+A7sq1PlHdhXZ8kzrFW4EbYeqM40WP8B1jLyQ2kFAAA="
+  "body": "H4sIAAAAAAAAA5VUy46bMBTd9ys87jYOOAOB8JK666qLPqRKVRUZfAnuEIyMmUka5d9rG6J5aTozLPw+93Hu4WZXXFb62ANq9L4tPmR2QpxpRjrSAONkGFTxAaHMbpBdmXUruhukoM1xb0bJOEaNgjrH3rYbD9oLwjUAjRiElG6iiPsB8OWfASM25HiolOg1Ll61AvF1zMN1CTwMub8Oy/Laf7+VdcRpFFSwYjSOWAX+arV+vxUe0YrWUQlBfB3WEedRVD63MuhjCxN7tyNY6ojgOaarAFZxXCU+LpbWHOmV3CkYhlMvB6GF7JJaHICnWvaJn7ZQazMpsWvs3IBbrPpDeie4bsyR7Fkl9DGhqVasm024S7Skw2K+RstgSEtW3eyUHDtOKtlKlXz0fT/9S0TH4ZBs3Hd+HNXjHenkvZPTA3+d7OAJktRMtMBPz5wq4OfMc/w4NXlWTm5VSn686IqL24m9AdQtKKLABGmgOdZqBIwsmVtXEEP2FTFf4TDTecuOcrQ35mgeGlp8FqhWco8mk1fGMy1QVovdqKDIxH6HBlWZOrs8RCW7Zd/tMHKh5njmHoV+f8ATrmK9Tb/I2EUirHR+P9kp81iReQ+febMvlPVGIXvWtsU4Cp6gaAOcldQnoV+HhFJgZLMKYxLQKgo269oPA244c4jMM2DP5mRikFKDutj6ZvPiqDwihlwOLduXnN0DL88d+tE46ba4M1KQd8vt9suPn9+32/w0EZlgDjUbW40XtibJr1PH9pDgiUh8/r0ApUxpu7FtF9Ph17leiS3XOTUxTB5mTzPTr/QI49WF+x/si3/jG7AvdpU3YF/sJU+wTuFW2KahelNj/QdWFBkzaQUAAA=="
 }
 ```
 </details>
@@ -108,14 +111,14 @@ Check the benchmark folder for details how these benchmarks are created
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"569-zUfUkD7cgk7QucqvQwI3st/slok\"",
+    "etag": "\"569-rISs5PyvDju4MyVjdrdbTEAqQ08\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "vary": "Accept-Encoding",
     "content-encoding": "gzip"
   },
   "isBase64Encoded": true,
-  "body": "H4sIAAAAAAAAA5VUyW7bMBC95ysY9mpaom0tliUBvfXUQxcgQFEYlDiy2MiiQFGJXcP/XpKSkQ1pEh24v1nePE16zWWpjx2gWu+b/Cq1E+JMM9KSGhgnfa/yK4RSu0F2ZdaNaG+RgibDnRkl4xjVCqoMe9t2OGhvFYQANGIQULqOIu6vgM//9BixPsN9qUSncf6mFYiXMQ/CAngQcD8MimLpf9xKGHEarUpYMBpHrAR/sQg/boVHtKRVVMAqXgZVxHkUFS+t9PrYwMje3QCWOiJ4huliBYs4LhMf53NrjnRK7hT0/amTvdBCtkklDsA3WnaJv2mg0mZSYlfbuQa3WHSHzb3gujZHsmOl0MeEbrRi7WTCXaI57WfTNZqv+k3BytudkkPLSSkbqZJPvu9v/hLRcjgka/edn0b1dEda+eDk9MhfK1t4hiQVEw3w0wunCvg59Rw/Tk2elZNbFZIfL7ri4m5krwd1B4ooMEEaaIa1GgAjS+bWFcSQfU3MlzvMeN6woxzsjTmahprmXwSqlNyj0eS18UxzlFZiNyjIU7HfoV6Vps4uD1HKdt61O4xcqBmeuEeB3x3wiCtZZ9PPU3aRCCuc3892Sj2Wp97jZ97kC6WdUcieNU0+DIInKKSxH0TUJ4FfLQilwMjaCJ6Eax5XwZJV5Yobzhwi9QzYszmZGKTUoC62vtu8OCqOiCGXQ8P2BWcPwMtzh34yjrrN740U5P18u/368+bHdpudRiITzKFiQ6PxzNYk+XVq2R4SPBKJz79noJQpbTs0zWw8/DbVK7HlOm9MDKOHydPE9Bs9wnh14f4H++rf+A7sq13lHdhXe8kzrFO4FbZpqN7YWP8Bwj2hnGkFAAA="
+  "body": "H4sIAAAAAAAAA5VUy46bMBTd9ys87jYOmEDI8JK666qLPqRKVRUZfAnuEIyMmUka5d9rG6J5aTozXvjJuY9zDze74rLSxx5Qo/dt8SGzC+JMM9KRBhgnw6CKDwhl9oDszuxb0d0gBW2OezNLxjFqFNQ59rbdeNBeGK0BaMwgovQ6jrkfAl/+GTBiQ46HSole4+JVK7BZbXi0LoFHEffXUVmu/PdbWcecxmEFAaObmFXgB8H6/VZ4TCtaxyWEm1VUx5zHcfncyqCPLUzs3Y5gqSOC55gGIQSbTZX4uFhac6RXcqdgGE69HIQWsktqcQCeatknftpCrc2ixK6xawNuE/SH9E5w3Zgr2bNK6GNCU61YN5twj2hJh8X8jJbhkJasutkpOXacVLKVKvno+376l4iOwyG5duP8OKrHJ9LJeyenB/462cETJKmZaIGfnjlVwM+Z5/hxavKsnNyulPx40RUXtxN7A6hbUESBCdJAc6zVCBhZMreuIIbsK2JG4TDTfcuOcrQv5mqeGlp8FqhWco8mk1fGMy1QVovdqKDIxH6HBlWZOrs8RCW7Zd/tMHKh5njmHkV+f8ATrmK9Tb/I2EUirHR+P9kl81iReQ8/82ZfKOuNQvasbYtxFDxB5r+g0ar0SeTXEaEUGCnDlU9KU5GaViygFRjOHCLzDNizOZkYpNSgLra+2bw4Ko+IIZdDy/YlZ/fAy+cO/WiedFvcGSnIu+V2++XHz+/bbX6aiEwwh5qNrcYLW5Pk16lje0jwRCQ+/16AUqa03di2i+ny61yvxJbrnJoYJg+zp5npV3qE8erC/Q/2xb/xDdgXu8obsC/2kidYp3ArbNNQvamx/gMVKBm5aQUAAA=="
 }
 ```
 </details>
@@ -123,22 +126,22 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _with-etag_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|130|87.5|217.5|104 MB|yJ2qkAfTaKTDQ/M6rqVDRA==|
-|_connect_|35.4|45.7|81.1|69.3 MB|3XT/KLXDYDvvyyb601pr9Q==|
-|_minimal_|28.1|42.5|70.5|69.9 MB|GPGTtxHJy4Q/WtdjrksW+w==|
+|_full_|130.6|88.4|219|110 MB|aBdast0mrD3EqF4zXA5s3Q==|
+|_connect_|34.1|46.2|80.3|70.2 MB|2niEM6V4HeLk5daDqum1qw==|
+|_minimal_|30.7|44|74.7|67.5 MB|fxOhavTohUqAHygAuRwB7w==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"569-CJmoRqbOTDJwL3y3hk64EYRFwBU\"",
+    "etag": "\"569-w4Ph9kcPZo/MnJnbQwK2eAMP+Hs\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "content-length": "1385"
   },
   "isBase64Encoded": true,
-  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDY4MzQ1N2YwLTUwZjItMTFlYS1hMGU0LTdmN2Q1NzAyMzZkNzwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
+  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDg1NDM0NzkwLTUwZjUtMTFlYS1iMWMyLTgzMTE3NzFiNzhmZDwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
 }
 ```
 </details>
@@ -149,13 +152,13 @@ Check the benchmark folder for details how these benchmarks are created
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"569-UtExeC2FRIXruFHJv/gGcyy/wZk\"",
+    "etag": "\"569-z5jvVFoKoSApArr4B7t2F7/mJGc\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "content-length": "1385"
   },
   "isBase64Encoded": true,
-  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDZiNDgwMDkwLTUwZjItMTFlYS05Mzg1LTUzMjZjODliY2JhMjwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
+  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDhiMDg3YmEwLTUwZjUtMTFlYS1iNDU1LTRmYzk2MjA4OTg2ODwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
 }
 ```
 </details>
@@ -166,13 +169,13 @@ Check the benchmark folder for details how these benchmarks are created
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"569-UlbnTiWmlOcrpWqqD0dRUmEkCUo\"",
+    "etag": "\"569-Y1RE/UjjFQJAVr/D2TaqOxSuXZI\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "content-length": 1385
   },
   "isBase64Encoded": false,
-  "body": "<!doctype html>\n<html data-n-head-ssr>\n  <head >\n    <link rel=\"preload\" href=\"/_nuxt/456ee17ae511977d04ed.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/e838d56bed55d065bb30.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/67d174ce2a187ace0226.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/d71c1f7be4835f7dd77b.js\" as=\"script\"><style data-vue-ssr-id=\"124e288c:0\">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>\n  </head>\n  <body >\n    <div data-server-rendered=\"true\" id=\"__nuxt\"><!----><div id=\"__layout\"><div><div><h1>Hi from server!</h1> <figure><img src=\"/nuxt-icon.png\" style=\"height: 50px\"> <figcaption><a href=\"/about\">About</a></figcaption></figure> <p><small>uuid: 6d6ab980-50f2-11ea-a523-0df0bbdf4e1c</small></p></div> <footer><small>Served by a nuxt-lambda</small></footer></div></div></div><script>window.__NUXT__={layout:\"default\",data:[{name:\"server\"}],error:null,serverRendered:true};</script><script src=\"/_nuxt/456ee17ae511977d04ed.js\" defer></script><script src=\"/_nuxt/d71c1f7be4835f7dd77b.js\" defer></script><script src=\"/_nuxt/e838d56bed55d065bb30.js\" defer></script><script src=\"/_nuxt/67d174ce2a187ace0226.js\" defer></script>\n  </body>\n</html>\n"
+  "body": "<!doctype html>\n<html data-n-head-ssr>\n  <head >\n    <link rel=\"preload\" href=\"/_nuxt/456ee17ae511977d04ed.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/e838d56bed55d065bb30.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/67d174ce2a187ace0226.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/d71c1f7be4835f7dd77b.js\" as=\"script\"><style data-vue-ssr-id=\"124e288c:0\">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>\n  </head>\n  <body >\n    <div data-server-rendered=\"true\" id=\"__nuxt\"><!----><div id=\"__layout\"><div><div><h1>Hi from server!</h1> <figure><img src=\"/nuxt-icon.png\" style=\"height: 50px\"> <figcaption><a href=\"/about\">About</a></figcaption></figure> <p><small>uuid: 8e121220-50f5-11ea-93a1-ffb5dfc9c97c</small></p></div> <footer><small>Served by a nuxt-lambda</small></footer></div></div></div><script>window.__NUXT__={layout:\"default\",data:[{name:\"server\"}],error:null,serverRendered:true};</script><script src=\"/_nuxt/456ee17ae511977d04ed.js\" defer></script><script src=\"/_nuxt/d71c1f7be4835f7dd77b.js\" defer></script><script src=\"/_nuxt/e838d56bed55d065bb30.js\" defer></script><script src=\"/_nuxt/67d174ce2a187ace0226.js\" defer></script>\n  </body>\n</html>\n"
 }
 ```
 </details>
@@ -181,9 +184,9 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _base_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|128.6|226.1|354.7|116 MB|DPgDl85zFYfiBnWM6glBNw==|
-|_connect_|36.1|142.1|178.2|71.3 MB|DPgDl85zFYfiBnWM6glBNw==|
-|_minimal_|30|120.6|150.6|71.8 MB|tJd3/XQ6XFswKbzA3XSqQw==|
+|_full_|130.7|177.9|308.6|107 MB|DPgDl85zFYfiBnWM6glBNw==|
+|_connect_|34.9|131.5|166.4|71.3 MB|DPgDl85zFYfiBnWM6glBNw==|
+|_minimal_|31.4|128|159.4|70.9 MB|tJd3/XQ6XFswKbzA3XSqQw==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
@@ -235,9 +238,9 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _with-compression_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|126.8|192.2|319|92.7 MB|pQHK5Sf4fORUIpGkSoLxVQ==|
-|_connect_|42.9|131.2|174.1|75.9 MB|pQHK5Sf4fORUIpGkSoLxVQ==|
-|_minimal_|36.9|153.3|190.2|70.7 MB|pQHK5Sf4fORUIpGkSoLxVQ==|
+|_full_|125.2|181|306.2|113 MB|pQHK5Sf4fORUIpGkSoLxVQ==|
+|_connect_|43.8|129.6|173.5|74.6 MB|pQHK5Sf4fORUIpGkSoLxVQ==|
+|_minimal_|31.3|141.7|173|71 MB|pQHK5Sf4fORUIpGkSoLxVQ==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
@@ -295,9 +298,9 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _with-etag_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|124.3|169.3|293.6|116 MB|YyOsCcyDXWnp4IUl+rF/8A==|
-|_connect_|35.3|130|165.3|71.9 MB|YyOsCcyDXWnp4IUl+rF/8A==|
-|_minimal_|28.8|136|164.7|72.8 MB|/0naPgKEVILCd4EgZ9umsQ==|
+|_full_|129.3|177.2|306.4|110 MB|YyOsCcyDXWnp4IUl+rF/8A==|
+|_connect_|35.6|129.6|165.1|71.2 MB|YyOsCcyDXWnp4IUl+rF/8A==|
+|_minimal_|29.6|139.6|169.2|71.3 MB|/0naPgKEVILCd4EgZ9umsQ==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
@@ -353,9 +356,9 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _base_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|125.8|78.2|203.9|113 MB|Oj9UlW05muQ2LHwz+7+a1w==|
-|_connect_|35.6|37|72.5|68.1 MB|Oj9UlW05muQ2LHwz+7+a1w==|
-|_minimal_|31.8|31.5|63.3|65.7 MB|atSW0WUyEvi3qig5Uosd7A==|
+|_full_|125|77.8|202.8|106 MB|Oj9UlW05muQ2LHwz+7+a1w==|
+|_connect_|34.3|38.9|73.2|68.9 MB|Oj9UlW05muQ2LHwz+7+a1w==|
+|_minimal_|28.2|31.5|59.7|69.3 MB|atSW0WUyEvi3qig5Uosd7A==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
@@ -397,9 +400,9 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _with-compression_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|132.3|88.3|220.6|105 MB|atSW0WUyEvi3qig5Uosd7A==|
-|_connect_|43.9|38.2|82.2|74.2 MB|atSW0WUyEvi3qig5Uosd7A==|
-|_minimal_|31.2|30.6|61.9|67.8 MB|atSW0WUyEvi3qig5Uosd7A==|
+|_full_|126.7|86.8|213.5|108 MB|atSW0WUyEvi3qig5Uosd7A==|
+|_connect_|44.3|38.3|82.5|72.2 MB|atSW0WUyEvi3qig5Uosd7A==|
+|_minimal_|33.6|32.7|66.3|67.5 MB|atSW0WUyEvi3qig5Uosd7A==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
@@ -445,9 +448,9 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _with-etag_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|125.5|80.6|206.1|112 MB|Oj9UlW05muQ2LHwz+7+a1w==|
-|_connect_|34.6|37.3|71.8|69.1 MB|Oj9UlW05muQ2LHwz+7+a1w==|
-|_minimal_|30.7|32.6|63.3|67.6 MB|atSW0WUyEvi3qig5Uosd7A==|
+|_full_|129.8|79.8|209.5|109 MB|Oj9UlW05muQ2LHwz+7+a1w==|
+|_connect_|35.7|38.6|74.3|69.8 MB|Oj9UlW05muQ2LHwz+7+a1w==|
+|_minimal_|30.6|32.5|63.2|67.6 MB|atSW0WUyEvi3qig5Uosd7A==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js

@@ -14,6 +14,8 @@ const LambdaBuild = require('../lib/build')
 const testCmd = path.resolve(__dirname, '../bin/test-lambda.js')
 const rootDir = path.resolve(__dirname, '../example')
 
+let takeAverageOfRuns = 3
+
 const configs = [
   'base',
   'with-compression',
@@ -65,6 +67,10 @@ async function main () {
     await fs.outputFile(path.resolve(__dirname, 'results.json'), JSON.stringify(results, null, 2), { encoding: 'utf8' })
   }
 
+  if (argv.runs) {
+    takeAverageOfRuns = parseInt(argv.runs) || takeAverageOfRuns
+  }
+
   const md = createMarkdown(results)
   await fs.outputFile(path.resolve(__dirname, '../BENCHMARKS.md'), md, { encoding: 'utf8' })
 
@@ -87,14 +93,39 @@ async function runBenchmarks () {
         results[pathname] = results[pathname] || {}
         results[pathname][config] = results[pathname][config] || {}
 
-        const { stdout } = await execa(testCmd, getTestArgs({ config, pathname }))
+        const takeAverages = []
+        for (let i = 0; i < takeAverageOfRuns; i++) {
+          const { stdout } = await execa(testCmd, getTestArgs({ config, pathname }))
 
-        consola.log(pathname, stdout)
+          consola.log(pathname, stdout)
 
-        try {
-          results[pathname][config][handler] = JSON.parse(stdout)
-        } catch (err) {
-          consola.error('Error parsing stdout', stdout)
+          try {
+            const benchmark = JSON.parse(stdout)
+
+            if (!results[pathname][config][handler]) {
+              results[pathname][config][handler] = benchmark
+            }
+
+            takeAverages.push(benchmark)
+          } catch (err) {
+            consola.error('Error parsing stdout', stdout)
+          }
+        }
+
+        if (takeAverageOfRuns > 1) {
+          for (const key in results[pathname][config][handler].stats) {
+            results[pathname][config][handler].stats[key] = Math.round(takeAverages.reduce(
+              (t, benchmark) => (t += 1*benchmark.stats[key]),
+              0
+            ) / takeAverageOfRuns)
+          }
+
+          for (const key in results[pathname][config][handler].mem) {
+            results[pathname][config][handler].mem[key] = Math.round(takeAverages.reduce(
+              (t, benchmark) => (t += 1*benchmark.mem[key]),
+              0
+            ) / takeAverageOfRuns)
+          }
         }
       }
     }
@@ -108,6 +139,9 @@ function createMarkdown (results) {
 # Benchmarks
 
 > :warning: The total times are measured without downloading & unzipping what normally occures on the AWS platform. Therefore these benchmarks only list _load/parse times_ and not _coldboot times_
+
+- Times are in \`ms\`
+- Times/memory usage are the averages of ${takeAverageOfRuns} runs
 
 Check the benchmark folder for details how these benchmarks are created
 
@@ -126,9 +160,9 @@ Check the benchmark folder for details how these benchmarks are created
       for (const handler in results[pathname][config]) {
         const result = results[pathname][config][handler]
 
-        const bootTime = prettyHrtime(result.boot)
-        const execTime = prettyHrtime(result.execute)
-        const totalTime = prettyHrtime(result.boot + result.execute)
+        const bootTime = prettyHrtime(result.stats.boot)
+        const execTime = prettyHrtime(result.stats.execute)
+        const totalTime = prettyHrtime(result.stats.boot + result.stats.execute)
         const memUsage = prettyBytes(result.mem.rss)
 
         const response = JSON.stringify(result.res, null, 2)
