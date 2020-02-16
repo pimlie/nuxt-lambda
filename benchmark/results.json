@@ -1,0 +1,552 @@
+{
+  "/": {
+    "base": {
+      "full": {
+        "boot": 125219644,
+        "execute": 79548166,
+        "mem": {
+          "rss": 112865280,
+          "heapTotal": 59355136,
+          "heapUsed": 40690792,
+          "external": 13951901
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "29",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate"
+          },
+          "isBase64Encoded": true,
+          "body": "TnV4dC5qcyBJbnRlcm5hbCBTZXJ2ZXIgRXJyb3I="
+        }
+      },
+      "connect": {
+        "boot": 36088653,
+        "execute": 38026319,
+        "mem": {
+          "rss": 66617344,
+          "heapTotal": 33181696,
+          "heapUsed": 18080952,
+          "external": 2597351
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "29",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate"
+          },
+          "isBase64Encoded": true,
+          "body": "TnV4dC5qcyBJbnRlcm5hbCBTZXJ2ZXIgRXJyb3I="
+        }
+      },
+      "minimal": {
+        "boot": 29953598,
+        "execute": 37911793,
+        "mem": {
+          "rss": 67403776,
+          "heapTotal": 31358976,
+          "heapUsed": 15927936,
+          "external": 4798338
+        },
+        "res": {
+          "statusCode": 200,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": 29,
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate"
+          },
+          "isBase64Encoded": false,
+          "body": "Nuxt.js Internal Server Error"
+        }
+      }
+    },
+    "with-compression": {
+      "full": {
+        "boot": 124747623,
+        "execute": 79535452,
+        "mem": {
+          "rss": 111472640,
+          "heapTotal": 59461632,
+          "heapUsed": 39980408,
+          "external": 13318189
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "29",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate"
+          },
+          "isBase64Encoded": true,
+          "body": "TnV4dC5qcyBJbnRlcm5hbCBTZXJ2ZXIgRXJyb3I="
+        }
+      },
+      "connect": {
+        "boot": 43842264,
+        "execute": 10774509,
+        "mem": {
+          "rss": 69799936,
+          "heapTotal": 34975744,
+          "heapUsed": 19292704,
+          "external": 2954814
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "29",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate"
+          },
+          "isBase64Encoded": true,
+          "body": "TnV4dC5qcyBJbnRlcm5hbCBTZXJ2ZXIgRXJyb3I="
+        }
+      },
+      "minimal": {
+        "boot": 30058907,
+        "execute": 38494879,
+        "mem": {
+          "rss": 67395584,
+          "heapTotal": 32661504,
+          "heapUsed": 18288672,
+          "external": 3065899
+        },
+        "res": {
+          "statusCode": 200,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip"
+          },
+          "isBase64Encoded": true,
+          "body": "H4sIAAAAAAAAA/MrrSjRyypW8MwrSS3KS8xRCE4tKkstUnAtKsovAgDz8UKYHQAAAA=="
+        }
+      }
+    },
+    "with-etag": {
+      "full": {
+        "boot": 128559766,
+        "execute": 90455798,
+        "mem": {
+          "rss": 105349120,
+          "heapTotal": 60796928,
+          "heapUsed": 36803624,
+          "external": 12001660
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip"
+          },
+          "isBase64Encoded": true,
+          "body": "H4sIAAAAAAAAA/MrrSjRyypW8MwrSS3KS8xRCE4tKkstUnAtKsovAgDz8UKYHQAAAA=="
+        }
+      },
+      "connect": {
+        "boot": 42215680,
+        "execute": 40588824,
+        "mem": {
+          "rss": 72843264,
+          "heapTotal": 35024896,
+          "heapUsed": 21854352,
+          "external": 6320536
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip"
+          },
+          "isBase64Encoded": true,
+          "body": "H4sIAAAAAAAAA/MrrSjRyypW8MwrSS3KS8xRCE4tKkstUnAtKsovAgDz8UKYHQAAAA=="
+        }
+      },
+      "minimal": {
+        "boot": 30412129,
+        "execute": 38632270,
+        "mem": {
+          "rss": 66879488,
+          "heapTotal": 32923648,
+          "heapUsed": 18275904,
+          "external": 3152523
+        },
+        "res": {
+          "statusCode": 200,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip"
+          },
+          "isBase64Encoded": true,
+          "body": "H4sIAAAAAAAAA/MrrSjRyypW8MwrSS3KS8xRCE4tKkstUnAtKsovAgDz8UKYHQAAAA=="
+        }
+      }
+    }
+  },
+  "/about": {
+    "base": {
+      "full": {
+        "boot": 124540457,
+        "execute": 70914693,
+        "mem": {
+          "rss": 111697920,
+          "heapTotal": 59355136,
+          "heapUsed": 39998752,
+          "external": 13999688
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "29",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate"
+          },
+          "isBase64Encoded": true,
+          "body": "TnV4dC5qcyBJbnRlcm5hbCBTZXJ2ZXIgRXJyb3I="
+        }
+      },
+      "connect": {
+        "boot": 34877516,
+        "execute": 30873297,
+        "mem": {
+          "rss": 69939200,
+          "heapTotal": 33386496,
+          "heapUsed": 18223360,
+          "external": 5021159
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "29",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate"
+          },
+          "isBase64Encoded": true,
+          "body": "TnV4dC5qcyBJbnRlcm5hbCBTZXJ2ZXIgRXJyb3I="
+        }
+      },
+      "minimal": {
+        "boot": 28797411,
+        "execute": 28952403,
+        "mem": {
+          "rss": 66330624,
+          "heapTotal": 32399360,
+          "heapUsed": 17389496,
+          "external": 3133430
+        },
+        "res": {
+          "statusCode": 200,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": 29,
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate"
+          },
+          "isBase64Encoded": false,
+          "body": "Nuxt.js Internal Server Error"
+        }
+      }
+    },
+    "with-compression": {
+      "full": {
+        "boot": 124702749,
+        "execute": 70668879,
+        "mem": {
+          "rss": 112451584,
+          "heapTotal": 59686912,
+          "heapUsed": 40741840,
+          "external": 13979679
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "29",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate"
+          },
+          "isBase64Encoded": true,
+          "body": "TnV4dC5qcyBJbnRlcm5hbCBTZXJ2ZXIgRXJyb3I="
+        }
+      },
+      "connect": {
+        "boot": 43550528,
+        "execute": 9948781,
+        "mem": {
+          "rss": 70258688,
+          "heapTotal": 34713600,
+          "heapUsed": 19196680,
+          "external": 2954814
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "29",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate"
+          },
+          "isBase64Encoded": true,
+          "body": "TnV4dC5qcyBJbnRlcm5hbCBTZXJ2ZXIgRXJyb3I="
+        }
+      },
+      "minimal": {
+        "boot": 31630273,
+        "execute": 31580867,
+        "mem": {
+          "rss": 68083712,
+          "heapTotal": 32923648,
+          "heapUsed": 17503648,
+          "external": 2711516
+        },
+        "res": {
+          "statusCode": 200,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip"
+          },
+          "isBase64Encoded": true,
+          "body": "H4sIAAAAAAAAA/MrrSjRyypW8MwrSS3KS8xRCE4tKkstUnAtKsovAgDz8UKYHQAAAA=="
+        }
+      }
+    },
+    "with-etag": {
+      "full": {
+        "boot": 126195956,
+        "execute": 83064477,
+        "mem": {
+          "rss": 114335744,
+          "heapTotal": 60129280,
+          "heapUsed": 41341712,
+          "external": 13091849
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip"
+          },
+          "isBase64Encoded": true,
+          "body": "H4sIAAAAAAAAA/MrrSjRyypW8MwrSS3KS8xRCE4tKkstUnAtKsovAgDz8UKYHQAAAA=="
+        }
+      },
+      "connect": {
+        "boot": 44424194,
+        "execute": 33633863,
+        "mem": {
+          "rss": 70275072,
+          "heapTotal": 34508800,
+          "heapUsed": 19992384,
+          "external": 2711516
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip"
+          },
+          "isBase64Encoded": true,
+          "body": "H4sIAAAAAAAAA/MrrSjRyypW8MwrSS3KS8xRCE4tKkstUnAtKsovAgDz8UKYHQAAAA=="
+        }
+      },
+      "minimal": {
+        "boot": 31638239,
+        "execute": 31905200,
+        "mem": {
+          "rss": 67604480,
+          "heapTotal": 32718848,
+          "heapUsed": 17475216,
+          "external": 2711516
+        },
+        "res": {
+          "statusCode": 200,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip"
+          },
+          "isBase64Encoded": true,
+          "body": "H4sIAAAAAAAAA/MrrSjRyypW8MwrSS3KS8xRCE4tKkstUnAtKsovAgDz8UKYHQAAAA=="
+        }
+      }
+    }
+  },
+  "/redirect": {
+    "base": {
+      "full": {
+        "boot": 126019715,
+        "execute": 73385199,
+        "mem": {
+          "rss": 110768128,
+          "heapTotal": 59305984,
+          "heapUsed": 38785560,
+          "external": 12820042
+        },
+        "res": {
+          "statusCode": 302,
+          "headers": {},
+          "isBase64Encoded": false,
+          "body": ""
+        }
+      },
+      "connect": {
+        "boot": 34275569,
+        "execute": 32868407,
+        "mem": {
+          "rss": 67874816,
+          "heapTotal": 33386496,
+          "heapUsed": 18254000,
+          "external": 3049507
+        },
+        "res": {
+          "statusCode": 302,
+          "headers": {},
+          "isBase64Encoded": false,
+          "body": ""
+        }
+      },
+      "minimal": {
+        "boot": 30409122,
+        "execute": 28775475,
+        "mem": {
+          "rss": 68296704,
+          "heapTotal": 31358976,
+          "heapUsed": 15314320,
+          "external": 4798338
+        },
+        "res": {
+          "statusCode": 302,
+          "headers": {
+            "location": "/about"
+          },
+          "isBase64Encoded": false,
+          "body": ""
+        }
+      }
+    },
+    "with-compression": {
+      "full": {
+        "boot": 123758702,
+        "execute": 73254593,
+        "mem": {
+          "rss": 113238016,
+          "heapTotal": 59355136,
+          "heapUsed": 39912624,
+          "external": 13838650
+        },
+        "res": {
+          "statusCode": 302,
+          "headers": {},
+          "isBase64Encoded": false,
+          "body": ""
+        }
+      },
+      "connect": {
+        "boot": 44736085,
+        "execute": 10122287,
+        "mem": {
+          "rss": 69591040,
+          "heapTotal": 34713600,
+          "heapUsed": 19214744,
+          "external": 2600431
+        },
+        "res": {
+          "statusCode": 500,
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "29",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate"
+          },
+          "isBase64Encoded": true,
+          "body": "TnV4dC5qcyBJbnRlcm5hbCBTZXJ2ZXIgRXJyb3I="
+        }
+      },
+      "minimal": {
+        "boot": 29782733,
+        "execute": 26347864,
+        "mem": {
+          "rss": 68943872,
+          "heapTotal": 32137216,
+          "heapUsed": 18435848,
+          "external": 6557854
+        },
+        "res": {
+          "statusCode": 302,
+          "headers": {
+            "location": "/about"
+          },
+          "isBase64Encoded": false,
+          "body": ""
+        }
+      }
+    },
+    "with-etag": {
+      "full": {
+        "boot": 125713150,
+        "execute": 83007442,
+        "mem": {
+          "rss": 113389568,
+          "heapTotal": 60129280,
+          "heapUsed": 41123256,
+          "external": 13060593
+        },
+        "res": {
+          "statusCode": 302,
+          "headers": {
+            "location": "/about"
+          },
+          "isBase64Encoded": false,
+          "body": ""
+        }
+      },
+      "connect": {
+        "boot": 42339331,
+        "execute": 33043482,
+        "mem": {
+          "rss": 72736768,
+          "heapTotal": 35287040,
+          "heapUsed": 21815448,
+          "external": 6947324
+        },
+        "res": {
+          "statusCode": 302,
+          "headers": {
+            "location": "/about"
+          },
+          "isBase64Encoded": false,
+          "body": ""
+        }
+      },
+      "minimal": {
+        "boot": 31066676,
+        "execute": 25716086,
+        "mem": {
+          "rss": 67403776,
+          "heapTotal": 32661504,
+          "heapUsed": 17393496,
+          "external": 2695124
+        },
+        "res": {
+          "statusCode": 302,
+          "headers": {
+            "location": "/about"
+          },
+          "isBase64Encoded": false,
+          "body": ""
+        }
+      }
+    }
+  }
+}

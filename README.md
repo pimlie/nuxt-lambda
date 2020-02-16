@@ -123,6 +123,42 @@ Debugging is implemented by returning a Proxy for the `res` and `req` variables 
 
 Also when `debug: true` the lambda wont be minimized, so you can check the file `${options.lambda.buildDir}/${options.lambda.name}.js` to debug the webpack build
 
+## Options
+
+You can add a `lambda` section in your nuxt.config with the following properties
+
+- `name` (default: _nuxt_)
+
+The name of your lambda, ie the zip will be named `<name>.zip`. Dont change this for now if you want to run the test-lambda command
+
+- `handler` (default: _connect_)
+
+Either `full`, `connect` or `minimal`. See [available handlers](#available-handlers)
+
+- `buildDir` (default: _.lambda_)
+
+The name of the folder where the intermediates for the lambda build are saved (dont use nuxt's buildDir, config is created before nuxt build which removes the nuxt builddir). If relative then relative to _rootDir_
+
+- `distDir` (default: _dist_)
+
+The name of the folder where the zipped lambda will be saved. If relative then relative to _rootDir_
+
+- `spa` (default: _false_)
+
+This is intended to be an override when you are using universal mode but have some single pages running as SPA. In essence it will _not_ optimize the lambda by removing SPA-only features
+
+- `webpack` (default: _null_)
+
+Any additional webpack config that is needed for your lambda build. At the moment it doesnt make really sense to touch this
+
+## Benchmarks
+
+Please check [Benchmarks](./BENCHMARKS.md)
+
+#### Running the benchmarks
+
+The benchmark command is located in `./benchmark/run.js`. It has one optional argument `--results` which can be used to point to a previous created results file instead running a new benchmark. Useful for markdown tweaking.
+
 ## Rationale for using the optimized handler by default
 
 A lambda should be very good at running a single task, ie have a single responsibility. Nuxt will by default start a connect server which provides a similar abstraction layer as lambdas provide. The connect server is actually a very strong feature of Nuxt.js, it helps greatly to simplify deployments. But there are also cases where you dont need this abstraction (anymore) or where this second abstraction layer is just the _wrong_ approach because you deploy serverless. Eg a common approach is to use Nuxt.js serverMiddleware's to deploy an API, but when you are deploying serverless that API should really be run in a separate lambda.
@@ -160,34 +196,6 @@ Probably not, it would be better to fix these imports in Nuxt.js core. That migh
 Eg just parsing/loading the `consola` dependency takes up to 10ms. Do we really need fancy logging in a lambda? Plain console should be good enough too, so we replace all `consola.<log-fn>` statements to `console.<log-fn>`.
 
 > This of course could break your code if you use non-standard log functions. Eg we have to set `render.ssrLog: false` because otherwise Nuxt.js will try to add a consola reporter
-
-## Options
-
-You can add a `lambda` section in your nuxt.config with the following properties
-
-- `name` (default: _nuxt_)
-
-The name of your lambda, ie the zip will be named `<name>.zip`. Dont change this for now if you want to run the test-lambda command
-
-- `handler` (default: _connect_)
-
-Either `full`, `connect` or `minimal`. See [available handlers](#available-handlers)
-
-- `buildDir` (default: _.lambda_)
-
-The name of the folder where the intermediates for the lambda build are saved (dont use nuxt's buildDir, config is created before nuxt build which removes the nuxt builddir). If relative then relative to _rootDir_
-
-- `distDir` (default: _dist_)
-
-The name of the folder where the zipped lambda will be saved. If relative then relative to _rootDir_
-
-- `spa` (default: _false_)
-
-This is intended to be an override when you are using universal mode but have some single pages running as SPA. In essence it will _not_ optimize the lambda by removing SPA-only features
-
-- `webpack` (default: _null_)
-
-Any additional webpack config that is needed for your lambda build. At the moment it doesnt make really sense to touch this
 
 ## TODO
 
