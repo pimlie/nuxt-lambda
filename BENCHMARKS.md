@@ -12,9 +12,9 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _base_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|125.3|85.3|210.6|111 MB|hH/vn//bFcbk4ZQbyeqAKQ==|
-|_connect_|34.7|45.2|79.9|70.3 MB|iKAoYkrLhAXVYREHGpHDIA==|
-|_minimal_|31.7|44.2|75.9|67.8 MB|o523CRiVsqy3x2s/4BaOZw==|
+|_full_|130.1|89.5|219.6|107 MB|ezCY8o03AuZjHZ8ZVLhuhg==|
+|_connect_|36.5|45.9|82.5|68.5 MB|P4akU8RHjYdwIvPnIvcoqA==|
+|_minimal_|30.9|42.5|73.4|68.2 MB|JtWullgNDfgD/ws2B3LukA==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
@@ -26,7 +26,7 @@ Check the benchmark folder for details how these benchmarks are created
     "content-length": "1385"
   },
   "isBase64Encoded": true,
-  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDYzMWY1OWIwLTUwZjUtMTFlYS1iODMwLWYxZWE2MGRlMWRkMDwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
+  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDY4NzU4MmQwLTUwZjYtMTFlYS1iNTBiLTRmNDgzMzI5NDMzZDwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
 }
 ```
 </details>
@@ -42,7 +42,7 @@ Check the benchmark folder for details how these benchmarks are created
     "content-length": "1385"
   },
   "isBase64Encoded": true,
-  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDY4ZjEzN2YwLTUwZjUtMTFlYS05NjFmLWI5MGNlMmYwNDg2MDwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
+  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDZlOGI2ZWYwLTUwZjYtMTFlYS05ZGJkLWEzYjlkMmU4ZTNiYzwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
 }
 ```
 </details>
@@ -58,7 +58,7 @@ Check the benchmark folder for details how these benchmarks are created
     "content-length": 1385
   },
   "isBase64Encoded": false,
-  "body": "<!doctype html>\n<html data-n-head-ssr>\n  <head >\n    <link rel=\"preload\" href=\"/_nuxt/456ee17ae511977d04ed.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/e838d56bed55d065bb30.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/67d174ce2a187ace0226.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/d71c1f7be4835f7dd77b.js\" as=\"script\"><style data-vue-ssr-id=\"124e288c:0\">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>\n  </head>\n  <body >\n    <div data-server-rendered=\"true\" id=\"__nuxt\"><!----><div id=\"__layout\"><div><div><h1>Hi from server!</h1> <figure><img src=\"/nuxt-icon.png\" style=\"height: 50px\"> <figcaption><a href=\"/about\">About</a></figcaption></figure> <p><small>uuid: 6bee7260-50f5-11ea-b0a3-0907efdc57d5</small></p></div> <footer><small>Served by a nuxt-lambda</small></footer></div></div></div><script>window.__NUXT__={layout:\"default\",data:[{name:\"server\"}],error:null,serverRendered:true};</script><script src=\"/_nuxt/456ee17ae511977d04ed.js\" defer></script><script src=\"/_nuxt/d71c1f7be4835f7dd77b.js\" defer></script><script src=\"/_nuxt/e838d56bed55d065bb30.js\" defer></script><script src=\"/_nuxt/67d174ce2a187ace0226.js\" defer></script>\n  </body>\n</html>\n"
+  "body": "<!doctype html>\n<html data-n-head-ssr>\n  <head >\n    <link rel=\"preload\" href=\"/_nuxt/456ee17ae511977d04ed.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/e838d56bed55d065bb30.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/67d174ce2a187ace0226.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/d71c1f7be4835f7dd77b.js\" as=\"script\"><style data-vue-ssr-id=\"124e288c:0\">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>\n  </head>\n  <body >\n    <div data-server-rendered=\"true\" id=\"__nuxt\"><!----><div id=\"__layout\"><div><div><h1>Hi from server!</h1> <figure><img src=\"/nuxt-icon.png\" style=\"height: 50px\"> <figcaption><a href=\"/about\">About</a></figcaption></figure> <p><small>uuid: 71a950c0-50f6-11ea-8e5b-e3ce16381d71</small></p></div> <footer><small>Served by a nuxt-lambda</small></footer></div></div></div><script>window.__NUXT__={layout:\"default\",data:[{name:\"server\"}],error:null,serverRendered:true};</script><script src=\"/_nuxt/456ee17ae511977d04ed.js\" defer></script><script src=\"/_nuxt/d71c1f7be4835f7dd77b.js\" defer></script><script src=\"/_nuxt/e838d56bed55d065bb30.js\" defer></script><script src=\"/_nuxt/67d174ce2a187ace0226.js\" defer></script>\n  </body>\n</html>\n"
 }
 ```
 </details>
@@ -66,23 +66,22 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _with-compression_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|126.1|100|226.1|111 MB|aL25ndKKrBizrWAk+zG0Fg==|
-|_connect_|43.2|47.1|90.3|72.1 MB|naWKprfMx65Lcw3EoLrU9A==|
-|_minimal_|31.9|47.7|79.6|68.2 MB|bCtKoAFlhWEc4AO6XITX3Q==|
+|_full_|126.6|100.4|227|107 MB|FcxfM6l4q3Q2+uwk5hnEjQ==|
+|_connect_|43.5|47.8|91.2|73 MB|BDr22V1fnHX9jJZLXK2APQ==|
+|_minimal_|30.7|45.4|76.1|68.1 MB|Ih12/gaGGPbRsVcOHcoE4w==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"569-ttvK8EwBOFtBkm6eIE2KNi++gNM\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "vary": "Accept-Encoding",
     "content-encoding": "gzip"
   },
   "isBase64Encoded": true,
-  "body": "H4sIAAAAAAAAA5VUy46bMBTdz1d43G0ccMIjAYLUXVdd9CGNVFWRwZfgDsHImJmkUf69tiGal6Yzw8K+2Jz7OPdws2suS33sANV63+RXmd0QZ5qRltTAOOl7lV8hlNkXZC1jN6K9RQqaDe7MKhnHqFZQbbC3bYeD9oIwAqAxg5DSdRxzPwA+/9NjxPoN7kslOo3zN73AarniYVQAD0PuR2FRLP2Pe4liTuOghAWjq5iV4C8W0ce98JiWtIoLCFbLsIo5j+PipZdeHxsY2bsbwFJHBN9gughgsVqViY/zuXVHOiV3Cvr+1MleaCHbpBIH4KmWXeKnDVTabErsarvX4IxFd0jvBde1OZIdK4U+JjTVirWTC3eJ5rSfTddoHvRpwcrbnZJDy0kpG6mST77vp3+JaDkckrV7zk+zevpGWvkQ5PQoXitbeIYkFRMN8NOLoAr4OfMcP05NnpWTswrJjxddcXE3steDugNFFJgkDXSDtRoAI0vm1jXEkH1NzJM7zHjesKMc7I05mpaa5l8EqpTco9HltYlMc5RVYjcoyDOx36FelabPrg5RynbetTuMXKobPHGPQr874BFXss6Wn2fsIhFWuLif7ZZ5LM+8x595UyyUdUYhe9Y0+TAInqA4WAKES5+EfhUSSoGRNY9KUvBFGK19auzScOYQmWfAnq3J5CClBnXx9d3WxVFxRAy5Ghq2Lzh7AF4+d+gn66jb/N5IQd7Pt9uvP29+bLeb00hkgjlUbGg0ntmeJL9OLdtDgkci8fn3DJQyrW2HppmNh9+mfiW2XefU5DBGmCJNTL8xI0xUl+5/sK/+je/AvjpV3oF9dZY8wzqFW2GbgeqNg/UfuZporGkFAAA="
+  "body": "H4sIAAAAAAAAA5VUy46bMBTd9ys87jYOmEBgCCB111UXfUiVqioy+BLcIRgZM5M0yr/XNkTz0nRmWPh97uPcw82uuKz0sQfU6H1bfMjshDjTjHSkAcbJMKjiA0KZ3SC7MutWdDdIQZvj3oyScYwaBXWOvW03HrQXRmsAGjOIKL2OY+6HwJd/BozYkOOhUqLXuHjVCiSrhEfrEngUcX8dleXKf7+VdcxpHFYQMJrErAI/CNbvt8JjWtE6LiFMVlEdcx7H5XMrgz62MLF3O4KljgieYxqEECRJlfq4WFpzpFdyp2AYTr0chBayS2txAL7Rsk/9TQu1NpMSu8bODbhF0B82d4LrxhzJnlVCH1O60Yp1swl3iZZ0WMzXaBkOm5JVNzslx46TSrZSpR9939/8JaLjcEiv3Xd+HNXjHenkvZPTA3+d7OAJktRMtMBPz5wq4OfMc/w4NXlWTm5VSn686IqL24m9AdQtKKLABGmgOdZqBIwsmVtXEEP2FTFf4TDTecuOcrQ35mgeGlp8FqhWco8mk1fGMy1QVovdqKDIxH6HBlWZOrs8RCW7Zd/tMHKh5njmHkV+f8ATrmK9Tb/I2EUirHR+P9kp81iReQ+febMvlPVGIXvWtsU4Cp6imAVR6K99Evn1mlAKjCR0tSI0CoKQ1UkYrFaGM4fIPAP2bE4mBik1qIutbzYvjsojYsjl0LJ9ydk98PLcoR+Nk26LOyMFebfcbr/8+Pl9u81PE5Ep5lCzsdV4YWuS/jp1bA8pnojE598LUMqUthvbdjEdfp3rldpynTcmhsnD7Glm+pUeYby6cP+DffFvfAP2xa7yBuyLveQJ1incCts0VG9qrP8A7BXWBGkFAAA="
 }
 ```
 </details>
@@ -93,14 +92,13 @@ Check the benchmark folder for details how these benchmarks are created
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"569-ru8oVjnmNGUtyVccTz3EitF6kLo\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "vary": "Accept-Encoding",
     "content-encoding": "gzip"
   },
   "isBase64Encoded": true,
-  "body": "H4sIAAAAAAAAA5VUy46bMBTd9ys87jYOOAOB8JK666qLPqRKVRUZfAnuEIyMmUka5d9rG6J5aTozLPw+93Hu4WZXXFb62ANq9L4tPmR2QpxpRjrSAONkGFTxAaHMbpBdmXUruhukoM1xb0bJOEaNgjrH3rYbD9oLwjUAjRiElG6iiPsB8OWfASM25HiolOg1Ll61AvF1zMN1CTwMub8Oy/Laf7+VdcRpFFSwYjSOWAX+arV+vxUe0YrWUQlBfB3WEedRVD63MuhjCxN7tyNY6ojgOaarAFZxXCU+LpbWHOmV3CkYhlMvB6GF7JJaHICnWvaJn7ZQazMpsWvs3IBbrPpDeie4bsyR7Fkl9DGhqVasm024S7Skw2K+RstgSEtW3eyUHDtOKtlKlXz0fT/9S0TH4ZBs3Hd+HNXjHenkvZPTA3+d7OAJktRMtMBPz5wq4OfMc/w4NXlWTm5VSn686IqL24m9AdQtKKLABGmgOdZqBIwsmVtXEEP2FTFf4TDTecuOcrQ35mgeGlp8FqhWco8mk1fGMy1QVovdqKDIxH6HBlWZOrs8RCW7Zd/tMHKh5njmHoV+f8ATrmK9Tb/I2EUirHR+P9kp81iReQ+febMvlPVGIXvWtsU4Cp6gaAOcldQnoV+HhFJgZLMKYxLQKgo269oPA244c4jMM2DP5mRikFKDutj6ZvPiqDwihlwOLduXnN0DL88d+tE46ba4M1KQd8vt9suPn9+32/w0EZlgDjUbW40XtibJr1PH9pDgiUh8/r0ApUxpu7FtF9Ph17leiS3XOTUxTB5mTzPTr/QI49WF+x/si3/jG7AvdpU3YF/sJU+wTuFW2KahelNj/QdWFBkzaQUAAA=="
+  "body": "H4sIAAAAAAAAA5VUyW7bMBC95ysY9mpaom0tliUBvfXUQxcgQFEYlDiy2MiiQFGJXcP/XpKSkQ1pEh24v1nePE16zWWpjx2gWu+b/Cq1E+JMM9KSGhgnfa/yK4RSu0F2ZdaNaG+RgibDnRkl4xjVCqoMe9t2OGhvFYQANGIQULqOIu6vgM//9BixPsN9qUSncf6mFYiXMQ/CAngQcD8MimLpf9xKGHEarUpYMBpHrAR/sQg/boVHtKRVVMAqXgZVxHkUFS+t9PrYwMje3QCWOiJ4huliBYs4LhMf53NrjnRK7hT0/amTvdBCtkklDsA3WnaJv2mg0mZSYlfbuQa3WHSHzb3gujZHsmOl0MeEbrRi7WTCXaI57WfTNZqv+k3BytudkkPLSSkbqZJPvu9v/hLRcjgka/edn0b1dEda+eDk9MhfK1t4hiQVEw3w0wunCvg59Rw/Tk2elZNbFZIfL7ri4m5krwd1B4ooMEEaaIa1GgAjS+bWFcSQfU3MlzvMeN6woxzsjTmahprmXwSqlNyj0eS18UxzlFZiNyjIU7HfoV6Vps4uD1HKdt61O4xcqBmeuEeB3x3wiCtZZ9PPU3aRCCuc3892Sj2Wp97jZ97kC6WdUcieNU0+DIInKKZ0tS7XPgn8KiSUAiNxGCxJEcVVuabRki58w5lDpJ4BezYnE4OUGtTF1nebF0fFETHkcmjYvuDsAXh57tBPxlG3+b2Rgryfb7dff9782G6z00hkgjlUbGg0ntmaJL9OLdtDgkci8fn3DJQypW2HppmNh9+meiW2XOeNiWH0MHmamH6jRxivLtz/YF/9G9+BfbWrvAP7ai95hnUKt8I2DdUbG+s/9pBvFmkFAAA="
 }
 ```
 </details>
@@ -111,14 +109,13 @@ Check the benchmark folder for details how these benchmarks are created
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"569-rISs5PyvDju4MyVjdrdbTEAqQ08\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "vary": "Accept-Encoding",
     "content-encoding": "gzip"
   },
   "isBase64Encoded": true,
-  "body": "H4sIAAAAAAAAA5VUy46bMBTd9ys87jYOmEDI8JK666qLPqRKVRUZfAnuEIyMmUka5d9rG6J5aTozXvjJuY9zDze74rLSxx5Qo/dt8SGzC+JMM9KRBhgnw6CKDwhl9oDszuxb0d0gBW2OezNLxjFqFNQ59rbdeNBeGK0BaMwgovQ6jrkfAl/+GTBiQ46HSole4+JVK7BZbXi0LoFHEffXUVmu/PdbWcecxmEFAaObmFXgB8H6/VZ4TCtaxyWEm1VUx5zHcfncyqCPLUzs3Y5gqSOC55gGIQSbTZX4uFhac6RXcqdgGE69HIQWsktqcQCeatknftpCrc2ixK6xawNuE/SH9E5w3Zgr2bNK6GNCU61YN5twj2hJh8X8jJbhkJasutkpOXacVLKVKvno+376l4iOwyG5duP8OKrHJ9LJeyenB/462cETJKmZaIGfnjlVwM+Z5/hxavKsnNyulPx40RUXtxN7A6hbUESBCdJAc6zVCBhZMreuIIbsK2JG4TDTfcuOcrQv5mqeGlp8FqhWco8mk1fGMy1QVovdqKDIxH6HBlWZOrs8RCW7Zd/tMHKh5njmHkV+f8ATrmK9Tb/I2EUirHR+P9kl81iReQ8/82ZfKOuNQvasbYtxFDxB5r+g0ar0SeTXEaEUGCnDlU9KU5GaViygFRjOHCLzDNizOZkYpNSgLra+2bw4Ko+IIZdDy/YlZ/fAy+cO/WiedFvcGSnIu+V2++XHz+/bbX6aiEwwh5qNrcYLW5Pk16lje0jwRCQ+/16AUqa03di2i+ny61yvxJbrnJoYJg+zp5npV3qE8erC/Q/2xb/xDdgXu8obsC/2kidYp3ArbNNQvamx/gMVKBm5aQUAAA=="
+  "body": "H4sIAAAAAAAAA5VUy46bMBTd9ys87jYONgOBEILUXVdd9CFVqqrI4EviDsHImJmkUf69tiGal6Yzw8Lvcx/nHm5+JVRljh2gndk3xYfcTUhww0lLdsAF6XtdfEAodxvkVnbdyPYGaWjWuLOj4gKjnYZ6jYNNOxxMEMULAJZwiBlbJomgEYj5nx4j3q9xX2nZGVy8agXS61TEixJEHAu6iMvymr7fyiIRLIkqCDlLE14BDcPF+62IhFWsTkqI0uu4ToRIkvK5ld4cGxjZux3AUUekWGMWRhCmaZVRXMydOdJptdXQ96dO9dJI1Wa1PIBYGdVldNVAbeyk5Xbn5h34RdgdVndSmJ09Uh2vpDlmbGU0bycT/hLNWT+brtE86lclr262Wg2tIJVqlM4+UkpXf4lsBRyypf/Oj6N6vCOtundyeuCvVS08QZKaywbE6ZlTDeKcB54fr6bAycmvSiWOF10JeTuy14O+BU002CAtdI2NHgAjR+bGF8SSfUXsV3jMeN7woxrcjT2ahh0rPktUa7VHo8kr65kVKK/ldtBQ5HK/Rb2ubJ19HrJS7bxrtxj5UNd44h7FtDvgEVfxzqVf5PwiEV56v5/clAe8yIOHz4LJF8o7q5A9b5piGKTIUBrTEERFSUzrBWEMOClZAiSslxGPE0qrdGk584g8sODA5WRjUMqAvtj65vISqDwijnwODd+Xgt8DL889+tE46ra4s1JQd/PN5suPn983m/VpJDLDAmo+NAbPXE2yX6eW7yHDI5H4/HsGWtvStkPTzMbDr1O9Mleu88rGMHqYPE1Mv9IjrFcf7n+wL/6Nb8C+2FXegH2xlzzBeoU7YduGGoyN9R964M8oaQUAAA=="
 }
 ```
 </details>
@@ -126,22 +123,22 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _with-etag_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|130.6|88.4|219|110 MB|aBdast0mrD3EqF4zXA5s3Q==|
-|_connect_|34.1|46.2|80.3|70.2 MB|2niEM6V4HeLk5daDqum1qw==|
-|_minimal_|30.7|44|74.7|67.5 MB|fxOhavTohUqAHygAuRwB7w==|
+|_full_|127.8|88.3|216.1|106 MB|V83htqNx0xF5vC9q8OY3tQ==|
+|_connect_|35.4|45.1|80.5|69.2 MB|pRMPziyvCS4tHIxTrf10Uw==|
+|_minimal_|31.4|43.1|74.5|67.9 MB|+tCY9BrQPeb54g8jNB0ZZQ==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"569-w4Ph9kcPZo/MnJnbQwK2eAMP+Hs\"",
+    "etag": "\"569-CQ+1H2GWuHC0SNoH+6ihtJFbCFE\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "content-length": "1385"
   },
   "isBase64Encoded": true,
-  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDg1NDM0NzkwLTUwZjUtMTFlYS1iMWMyLTgzMTE3NzFiNzhmZDwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
+  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDhkMzNjYWEwLTUwZjYtMTFlYS05ZjU5LWJkZGRlNDdjNjNlNDwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
 }
 ```
 </details>
@@ -152,13 +149,13 @@ Check the benchmark folder for details how these benchmarks are created
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"569-z5jvVFoKoSApArr4B7t2F7/mJGc\"",
+    "etag": "\"569-IBjlhV7SEPrTf4lGF97+CUqPaEg\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "content-length": "1385"
   },
   "isBase64Encoded": true,
-  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDhiMDg3YmEwLTUwZjUtMTFlYS1iNDU1LTRmYzk2MjA4OTg2ODwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
+  "body": "PCFkb2N0eXBlIGh0bWw+CjxodG1sIGRhdGEtbi1oZWFkLXNzcj4KICA8aGVhZCA+CiAgICA8bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC80NTZlZTE3YWU1MTE5NzdkMDRlZC5qcyIgYXM9InNjcmlwdCI+PGxpbmsgcmVsPSJwcmVsb2FkIiBocmVmPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGFzPSJzY3JpcHQiPjxsaW5rIHJlbD0icHJlbG9hZCIgaHJlZj0iL19udXh0LzY3ZDE3NGNlMmExODdhY2UwMjI2LmpzIiBhcz0ic2NyaXB0Ij48bGluayByZWw9InByZWxvYWQiIGhyZWY9Ii9fbnV4dC9kNzFjMWY3YmU0ODM1ZjdkZDc3Yi5qcyIgYXM9InNjcmlwdCI+PHN0eWxlIGRhdGEtdnVlLXNzci1pZD0iMTI0ZTI4OGM6MCI+Lm51eHQtcHJvZ3Jlc3N7cG9zaXRpb246Zml4ZWQ7dG9wOjA7bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjJweDt3aWR0aDowO29wYWNpdHk6MTt0cmFuc2l0aW9uOndpZHRoIC4xcyxvcGFjaXR5IC40cztiYWNrZ3JvdW5kLWNvbG9yOiMwMDA7ei1pbmRleDo5OTk5OTl9Lm51eHQtcHJvZ3Jlc3MubnV4dC1wcm9ncmVzcy1ub3RyYW5zaXRpb257dHJhbnNpdGlvbjpub25lfS5udXh0LXByb2dyZXNzLWZhaWxlZHtiYWNrZ3JvdW5kLWNvbG9yOnJlZH08L3N0eWxlPgogIDwvaGVhZD4KICA8Ym9keSA+CiAgICA8ZGl2IGRhdGEtc2VydmVyLXJlbmRlcmVkPSJ0cnVlIiBpZD0iX19udXh0Ij48IS0tLS0+PGRpdiBpZD0iX19sYXlvdXQiPjxkaXY+PGRpdj48aDE+SGkgZnJvbSBzZXJ2ZXIhPC9oMT4gPGZpZ3VyZT48aW1nIHNyYz0iL251eHQtaWNvbi5wbmciIHN0eWxlPSJoZWlnaHQ6IDUwcHgiPiA8ZmlnY2FwdGlvbj48YSBocmVmPSIvYWJvdXQiPkFib3V0PC9hPjwvZmlnY2FwdGlvbj48L2ZpZ3VyZT4gPHA+PHNtYWxsPnV1aWQ6IDkyZDQ1ZmIwLTUwZjYtMTFlYS1iOTEyLTg1ZTA4MDQ4NjQzZTwvc21hbGw+PC9wPjwvZGl2PiA8Zm9vdGVyPjxzbWFsbD5TZXJ2ZWQgYnkgYSBudXh0LWxhbWJkYTwvc21hbGw+PC9mb290ZXI+PC9kaXY+PC9kaXY+PC9kaXY+PHNjcmlwdD53aW5kb3cuX19OVVhUX189e2xheW91dDoiZGVmYXVsdCIsZGF0YTpbe25hbWU6InNlcnZlciJ9XSxlcnJvcjpudWxsLHNlcnZlclJlbmRlcmVkOnRydWV9Ozwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNDU2ZWUxN2FlNTExOTc3ZDA0ZWQuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZDcxYzFmN2JlNDgzNWY3ZGQ3N2IuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvZTgzOGQ1NmJlZDU1ZDA2NWJiMzAuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvX251eHQvNjdkMTc0Y2UyYTE4N2FjZTAyMjYuanMiIGRlZmVyPjwvc2NyaXB0PgogIDwvYm9keT4KPC9odG1sPgo="
 }
 ```
 </details>
@@ -169,13 +166,13 @@ Check the benchmark folder for details how these benchmarks are created
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"569-Y1RE/UjjFQJAVr/D2TaqOxSuXZI\"",
+    "etag": "\"569-GleRMwCcE0KmPp66tydpTNyd3XI\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "content-length": 1385
   },
   "isBase64Encoded": false,
-  "body": "<!doctype html>\n<html data-n-head-ssr>\n  <head >\n    <link rel=\"preload\" href=\"/_nuxt/456ee17ae511977d04ed.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/e838d56bed55d065bb30.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/67d174ce2a187ace0226.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/d71c1f7be4835f7dd77b.js\" as=\"script\"><style data-vue-ssr-id=\"124e288c:0\">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>\n  </head>\n  <body >\n    <div data-server-rendered=\"true\" id=\"__nuxt\"><!----><div id=\"__layout\"><div><div><h1>Hi from server!</h1> <figure><img src=\"/nuxt-icon.png\" style=\"height: 50px\"> <figcaption><a href=\"/about\">About</a></figcaption></figure> <p><small>uuid: 8e121220-50f5-11ea-93a1-ffb5dfc9c97c</small></p></div> <footer><small>Served by a nuxt-lambda</small></footer></div></div></div><script>window.__NUXT__={layout:\"default\",data:[{name:\"server\"}],error:null,serverRendered:true};</script><script src=\"/_nuxt/456ee17ae511977d04ed.js\" defer></script><script src=\"/_nuxt/d71c1f7be4835f7dd77b.js\" defer></script><script src=\"/_nuxt/e838d56bed55d065bb30.js\" defer></script><script src=\"/_nuxt/67d174ce2a187ace0226.js\" defer></script>\n  </body>\n</html>\n"
+  "body": "<!doctype html>\n<html data-n-head-ssr>\n  <head >\n    <link rel=\"preload\" href=\"/_nuxt/456ee17ae511977d04ed.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/e838d56bed55d065bb30.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/67d174ce2a187ace0226.js\" as=\"script\"><link rel=\"preload\" href=\"/_nuxt/d71c1f7be4835f7dd77b.js\" as=\"script\"><style data-vue-ssr-id=\"124e288c:0\">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}</style>\n  </head>\n  <body >\n    <div data-server-rendered=\"true\" id=\"__nuxt\"><!----><div id=\"__layout\"><div><div><h1>Hi from server!</h1> <figure><img src=\"/nuxt-icon.png\" style=\"height: 50px\"> <figcaption><a href=\"/about\">About</a></figcaption></figure> <p><small>uuid: 95da4cb0-50f6-11ea-bd19-e580f3a822a5</small></p></div> <footer><small>Served by a nuxt-lambda</small></footer></div></div></div><script>window.__NUXT__={layout:\"default\",data:[{name:\"server\"}],error:null,serverRendered:true};</script><script src=\"/_nuxt/456ee17ae511977d04ed.js\" defer></script><script src=\"/_nuxt/d71c1f7be4835f7dd77b.js\" defer></script><script src=\"/_nuxt/e838d56bed55d065bb30.js\" defer></script><script src=\"/_nuxt/67d174ce2a187ace0226.js\" defer></script>\n  </body>\n</html>\n"
 }
 ```
 </details>
@@ -184,9 +181,9 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _base_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|130.7|177.9|308.6|107 MB|DPgDl85zFYfiBnWM6glBNw==|
-|_connect_|34.9|131.5|166.4|71.3 MB|DPgDl85zFYfiBnWM6glBNw==|
-|_minimal_|31.4|128|159.4|70.9 MB|tJd3/XQ6XFswKbzA3XSqQw==|
+|_full_|132.2|180.9|313.1|117 MB|DPgDl85zFYfiBnWM6glBNw==|
+|_connect_|35.4|128.5|163.9|71.3 MB|DPgDl85zFYfiBnWM6glBNw==|
+|_minimal_|30.7|125.1|155.9|70.8 MB|tJd3/XQ6XFswKbzA3XSqQw==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
@@ -238,16 +235,15 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _with-compression_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|125.2|181|306.2|113 MB|pQHK5Sf4fORUIpGkSoLxVQ==|
-|_connect_|43.8|129.6|173.5|74.6 MB|pQHK5Sf4fORUIpGkSoLxVQ==|
-|_minimal_|31.3|141.7|173|71 MB|pQHK5Sf4fORUIpGkSoLxVQ==|
+|_full_|125.9|181.5|307.4|113 MB|58FxPFjLIbcBIK9eerUorg==|
+|_connect_|43.4|142.4|185.8|74.6 MB|58FxPFjLIbcBIK9eerUorg==|
+|_minimal_|30.9|145.9|176.8|70.2 MB|58FxPFjLIbcBIK9eerUorg==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"b2c-+4BzmtOUQYVrYTP+Rq9V0+WHIdM\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "vary": "Accept-Encoding",
@@ -265,7 +261,6 @@ Check the benchmark folder for details how these benchmarks are created
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"b2c-+4BzmtOUQYVrYTP+Rq9V0+WHIdM\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "vary": "Accept-Encoding",
@@ -283,7 +278,6 @@ Check the benchmark folder for details how these benchmarks are created
 {
   "statusCode": 200,
   "headers": {
-    "etag": "\"b2c-+4BzmtOUQYVrYTP+Rq9V0+WHIdM\"",
     "content-type": "text/html; charset=utf-8",
     "accept-ranges": "none",
     "vary": "Accept-Encoding",
@@ -298,9 +292,9 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _with-etag_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|129.3|177.2|306.4|110 MB|YyOsCcyDXWnp4IUl+rF/8A==|
-|_connect_|35.6|129.6|165.1|71.2 MB|YyOsCcyDXWnp4IUl+rF/8A==|
-|_minimal_|29.6|139.6|169.2|71.3 MB|/0naPgKEVILCd4EgZ9umsQ==|
+|_full_|129.8|174.8|304.7|107 MB|YyOsCcyDXWnp4IUl+rF/8A==|
+|_connect_|34.4|139.7|174|72.7 MB|YyOsCcyDXWnp4IUl+rF/8A==|
+|_minimal_|30.2|351|381.2|72.2 MB|/0naPgKEVILCd4EgZ9umsQ==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
@@ -356,9 +350,9 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _base_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|125|77.8|202.8|106 MB|Oj9UlW05muQ2LHwz+7+a1w==|
-|_connect_|34.3|38.9|73.2|68.9 MB|Oj9UlW05muQ2LHwz+7+a1w==|
-|_minimal_|28.2|31.5|59.7|69.3 MB|atSW0WUyEvi3qig5Uosd7A==|
+|_full_|125.1|77|202.1|105 MB|Oj9UlW05muQ2LHwz+7+a1w==|
+|_connect_|34.2|37.4|71.6|68.4 MB|Oj9UlW05muQ2LHwz+7+a1w==|
+|_minimal_|29.6|31.8|61.3|69.1 MB|atSW0WUyEvi3qig5Uosd7A==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
@@ -400,9 +394,9 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _with-compression_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|126.7|86.8|213.5|108 MB|atSW0WUyEvi3qig5Uosd7A==|
-|_connect_|44.3|38.3|82.5|72.2 MB|atSW0WUyEvi3qig5Uosd7A==|
-|_minimal_|33.6|32.7|66.3|67.5 MB|atSW0WUyEvi3qig5Uosd7A==|
+|_full_|126.8|89.8|216.6|111 MB|atSW0WUyEvi3qig5Uosd7A==|
+|_connect_|44|37.9|81.9|70.6 MB|atSW0WUyEvi3qig5Uosd7A==|
+|_minimal_|30.9|30.9|61.8|66.9 MB|atSW0WUyEvi3qig5Uosd7A==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js
@@ -448,9 +442,9 @@ Check the benchmark folder for details how these benchmarks are created
 ### Config _with-etag_
 |handler|load time|exec time|total time|memory usage|chksum|
 |---|---|---|---|---|---|
-|_full_|129.8|79.8|209.5|109 MB|Oj9UlW05muQ2LHwz+7+a1w==|
-|_connect_|35.7|38.6|74.3|69.8 MB|Oj9UlW05muQ2LHwz+7+a1w==|
-|_minimal_|30.6|32.5|63.2|67.6 MB|atSW0WUyEvi3qig5Uosd7A==|
+|_full_|125.9|78|203.9|110 MB|Oj9UlW05muQ2LHwz+7+a1w==|
+|_connect_|35.4|37.3|72.6|68.5 MB|Oj9UlW05muQ2LHwz+7+a1w==|
+|_minimal_|30.1|31.5|61.6|67.3 MB|atSW0WUyEvi3qig5Uosd7A==|
 <details><summary>Response for <i>full</i></summary>
 
 ```js

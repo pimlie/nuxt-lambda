@@ -7,6 +7,7 @@ export default {
     distDir: 'dist-with-compression'
   },
   render: {
-    compressor: {}
+    compressor: {},
+    etag: false
   }
 }
