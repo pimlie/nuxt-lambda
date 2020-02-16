@@ -49,7 +49,7 @@ It will by default create a `.lambda` dir in your rootDir containing the interme
 ```js
 $ yarn nuxt-lambda <rootDir> [-c nuxt.config.js]
 
-// eg: yarn test-lambda src
+// eg: yarn nuxt-lambda src
 ```
 
 - `--handler`
