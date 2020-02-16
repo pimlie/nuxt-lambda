@@ -115,14 +115,14 @@ async function runBenchmarks () {
         if (takeAverageOfRuns > 1) {
           for (const key in results[pathname][config][handler].stats) {
             results[pathname][config][handler].stats[key] = Math.round(takeAverages.reduce(
-              (t, benchmark) => (t += 1*benchmark.stats[key]),
+              (t, benchmark) => (t += 1 * benchmark.stats[key]),
               0
             ) / takeAverageOfRuns)
           }
 
           for (const key in results[pathname][config][handler].mem) {
             results[pathname][config][handler].mem[key] = Math.round(takeAverages.reduce(
-              (t, benchmark) => (t += 1*benchmark.mem[key]),
+              (t, benchmark) => (t += 1 * benchmark.mem[key]),
               0
             ) / takeAverageOfRuns)
           }
