@@ -72,7 +72,7 @@ _Not supported yet_
 
 _Not supported yet_
 
-#### test-lambda
+### test-lambda
 
 The command to test a lambda. See `-h` for available options.
 
