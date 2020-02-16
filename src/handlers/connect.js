@@ -1,5 +1,5 @@
 import connect from 'connect'
-import { initVueRenderer } from '../nuxt'
+import { initVueRenderer } from '../renderer'
 import { prepareUrl } from '../utils'
 import nuxtMiddleware from '../middleware/nuxt' // => packages/server/src/middleware/nuxt
 import errorMiddleware from '../middleware/error' // => packages/server/src/middleware/error

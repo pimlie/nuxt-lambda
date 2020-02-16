@@ -1,11 +1,10 @@
 import { VueRenderer } from '@nuxt/vue-renderer'
 import options from 'nuxt.config.js'
-
-export {
-  VueRenderer
-}
+import { fixConfig } from './utils'
 
 export function initVueRenderer () {
+  fixConfig(options)
+
   const nuxt = {
     hook: () => {},
     callHook: () => {}

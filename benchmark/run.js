@@ -3,11 +3,13 @@
 const path = require('path')
 const crypto = require('crypto')
 const fs = require('fs-extra')
+const consola = require('consola')
 const execa = require('execa')
 const minimist = require('minimist')
 const prettyBytes = require('pretty-bytes')
 const { NuxtCommand } = require('../lib/utils/nuxt')
 const LambdaBuild = require('../lib/build')
+// const LambdaTest = require('../lib/test')
 
 const testCmd = path.resolve(__dirname, '../bin/test-lambda.js')
 const rootDir = path.resolve(__dirname, '../example')
@@ -66,8 +68,7 @@ async function main () {
   const md = createMarkdown(results)
   await fs.outputFile(path.resolve(__dirname, '../BENCHMARKS.md'), md, { encoding: 'utf8' })
 
-  // eslint-disable-next-line no-console
-  console.log('Benchmarks created')
+  consola.info('Benchmarks created')
 }
 
 async function runBenchmarks () {
@@ -88,10 +89,13 @@ async function runBenchmarks () {
 
         const { stdout } = await execa(testCmd, getTestArgs({ config, pathname }))
 
-        // eslint-disable-next-line no-console
-        console.log(pathname, stdout)
+        consola.log(pathname, stdout)
 
-        results[pathname][config][handler] = JSON.parse(stdout)
+        try {
+          results[pathname][config][handler] = JSON.parse(stdout)
+        } catch (err) {
+          consola.error('Error parsing stdout', stdout)
+        }
       }
     }
   }

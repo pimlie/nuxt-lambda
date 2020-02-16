@@ -16,7 +16,6 @@ This command will by default create a lambda for Nuxt.js SSR that is optimized t
 - No support for server middlewares (although we might be able to add support for this at a later time)
 - No support for serving static files (eg use Netlify if you want to deploy quickly)
 - No support for hooks
-- mode: SPA is probably broken for now (not tested, but render.shouldPrefetch/Preload are functions and we serialize with JSON.stringify)
 
 ### Possible tunables
 

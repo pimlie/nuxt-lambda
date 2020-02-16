@@ -1,4 +1,5 @@
 export { default as compressionMiddleware } from './compression'
+export * from './config'
 export * from './debug'
 export * from './request'
 export * from './response'
