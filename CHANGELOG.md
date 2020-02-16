@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/pimlie/nuxt-lambda/compare/v0.2.2...v0.3.0) (2020-02-16)
+
+
+### Features
+
+* refactoring, better support for different handlers ([ba3bcc2](https://github.com/pimlie/nuxt-lambda/commit/ba3bcc25733ac3803cb897cefb12f95ce6bdaac7))
+
+
+### Bug Fixes
+
+* revert build script changes ([477d93f](https://github.com/pimlie/nuxt-lambda/commit/477d93f058c30543a90a4ff21ab31da503cec121))
+* serialize/eval shouldPrefetch/Preload functions ([2273537](https://github.com/pimlie/nuxt-lambda/commit/2273537b9cb006cec1a01797400946084694f688))
+
 ### [0.2.2](https://github.com/pimlie/nuxt-lambda/compare/v0.2.1...v0.2.2) (2020-02-03)
 
 
