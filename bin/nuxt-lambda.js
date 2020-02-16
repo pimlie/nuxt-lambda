@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('@nuxt/cli').NuxtCommand.run(require('../lib'))
+require('../lib/utils/nuxt').NuxtCommand.run(require('../lib/build'))

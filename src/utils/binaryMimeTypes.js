@@ -1,3 +1,4 @@
+// See: https://forums.aws.amazon.com/thread.jspa?messageID=668306#668306
 export default [
   'application/javascript',
   'application/json',

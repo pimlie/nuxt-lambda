@@ -1,3 +1,5 @@
+> :fire: This package is still under heavy development & testing, especially the minimal handler. We are also waiting for better support in Nuxt.js which should be available soon. Please expect an unstable API until v1
+
 # Nuxt command to create a Nuxt.js lambda (beta)
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -5,9 +7,9 @@
 
 ### :warning: Optimized build by default with limited Nuxt.js functionality
 
-> You can disable the optimized build by setting `lambda.optimize: false` in your nuxt.config
+> You can enable the full Nuxt.js handler by setting `lambda.handler: 'full'` in your nuxt.config
 
-This command will by default create a lambda for Nuxt.js SSR that is extremely optimized to run serverless. That means most non-essential Nuxt.js SSR features have been stripped out.
+This command will by default create a lambda for Nuxt.js SSR that is optimized to run serverless. That means most non-essential Nuxt.js SSR features have been stripped out.
 
 - No connect server (it uses @nuxt/vue-renderer directly instead of going through @nuxt/server)
 - No support for runtime modules (only buildModules)
@@ -16,10 +18,10 @@ This command will by default create a lambda for Nuxt.js SSR that is extremely o
 - No support for hooks
 - mode: SPA is probably broken for now (not tested, but render.shouldPrefetch/Preload are functions and we serialize with JSON.stringify)
 
-### Recommended tunables
+### Possible tunables
 
 - turn off compression `render.compressor: false`
-- turn off etags (?) `render.etag: false`
+- turn off etags `render.etag: false`
 
 ## How to use
 
@@ -51,6 +53,68 @@ $ yarn test-lambda <rootDir?> <url path>
 // eg: yarn test-lambda src /about
 // eg: yarn test-lambda /about
 ```
+
+## Commands
+
+### nuxt-lambda
+
+The command to build a lambda. See `-h` for all available options (not all are supported).
+
+- `--handler`
+
+Same as `options.lambda.handler`, see [Options](#options). Used to quickly override the handler you want to use
+
+- `--no-config`
+
+_Not supported yet_
+
+- `--no-nuxt`
+
+Build a lambda without re-building your Nuxt.js project.
+
+- `--no-lambda`
+
+_Not supported yet_
+
+- `--no-zip`
+
+_Not supported yet_
+
+#### test-lambda
+
+The command to test a lambda. See `-h` for available options.
+
+Accepts either a path to a nuxt rootDir or a path to a packed lambda zip file.
+
+- `-p`, `--persistent`
+
+Normally when running test-lambda the lambda is unzipped in a temporary directory which is cleaned-up when the lambda has finished. Passing the persistent option unpacks the lambda in the `options.lambda.distDir` folder instead only when it doesnt exists yet
+
+## Available Handlers
+
+#### connect (default)
+
+This is an optimized handler that uses `connect` & `serverless-http` to process requests without starting a full blown server.
+
+#### minimal (experimental, proof of concept)
+
+This is an extremely optimized handler, it uses abstracted implementations for most dependencies which cannot be tree-shaked but have a reasonable effect on cold-boot / execution times.
+
+> Dont use this handler yet in production until we have implemented more tests
+
+- no `serverless-http`, uses a lightweight custom implementation
+- `fs-extra` is stubbed with a lightweight custom implementation
+- a custom `compression` middleware is used
+
+Preliminary savings seem to be around ~10ms compared to the connect handler
+
+#### full
+
+Just start a full-blown Nuxt.js server instance with all Nuxt.js features and dependencies. Not optimized at all, provided as fallback so you can still benefit from the packaging this command provides
+
+## Debugging
+
+For the optimized handlers, make sure to set `debug: true` in your `nuxt.config`. Then re-build your lambda & run the `test-lambda` command with the env `LAMBDA_DEBUG=1`
 
 ## Rationale for using the optimized handler by default
 
@@ -98,9 +162,9 @@ You can add a `lambda` section in your nuxt.config with the following properties
 
 The name of your lambda, ie the zip will be named `<name>.zip`. Dont change this for now if you want to run the test-lambda command
 
-- `optimize` (default: _true_)
+- `handler` (default: _connect_)
 
-If _false_ a default Nuxt.js handler will be used, no optimizations at all. This means that eg a connect server will be started and you can use serverMiddleware's
+Either `full`, `connect` or `minimal`. See [#available-handlers](available handlers)
 
 - `buildDir` (default: _.lambda_)
 

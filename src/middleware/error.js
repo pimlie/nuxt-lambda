@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs-extra'
-import consola from 'consola'
+// import consola from 'consola'
 
 import Youch from '@nuxtjs/youch'
 
@@ -36,7 +36,8 @@ export default ({ resources, options }) => async function errorMiddleware (err, 
   if (!options.debug) {
     // We hide actual errors from end users, so show them on server logs
     if (err.statusCode !== 404) {
-      consola.error(err)
+      // eslint-disable-next-line no-console
+      console.error(err)
     }
     // Json format is compatible with Youch json responses
     const json = {

@@ -1,6 +1,6 @@
 import generateETag from 'etag'
 import fresh from 'fresh'
-import consola from 'consola'
+// import consola from 'consola'
 
 export default ({ options, nuxt, renderRoute, resources }) => async function nuxtMiddleware (req, res, next) {
   // Get context
@@ -82,7 +82,8 @@ export default ({ options, nuxt, renderRoute, resources }) => async function nux
     return html
   } catch (err) {
     if (context && context.redirected) {
-      consola.error(err)
+      // eslint-disable-next-line no-console
+      console.error(err)
       return err
     }
 
@@ -95,7 +96,8 @@ export default ({ options, nuxt, renderRoute, resources }) => async function nux
 
 const defaultPushAssets = (preloadFiles, shouldPush, publicPath, options) => {
   if (shouldPush && options.dev) {
-    consola.warn('http2.shouldPush is deprecated. Use http2.pushAssets function')
+    // eslint-disable-next-line no-console
+    console.warn('http2.shouldPush is deprecated. Use http2.pushAssets function')
   }
 
   const links = []
