@@ -90,6 +90,10 @@ Accepts either a path to a nuxt rootDir or a path to a packed lambda zip file.
 
 Normally when running test-lambda the lambda is unzipped in a temporary directory which is cleaned-up when the lambda has finished. Passing the persistent option unpacks the lambda in the `options.lambda.distDir` folder instead only when it doesnt exists yet
 
+- `--debug`
+
+If your lambda was built with `debug: true` in your nuxt.config, use this switch to toggle verbose logging
+
 ## Available Handlers
 
 #### connect (default)
@@ -114,7 +118,11 @@ Just start a full-blown Nuxt.js server instance with all Nuxt.js features and de
 
 ## Debugging
 
-For the optimized handlers, make sure to set `debug: true` in your `nuxt.config`. Then re-build your lambda & run the `test-lambda` command with the env `LAMBDA_DEBUG=1`
+For the optimized handlers, make sure to set `debug: true` in your `nuxt.config`. Then re-build your lambda & run the `test-lambda` command with `--debug`
+
+Debugging is implemented by returning a Proxy for the `res` and `req` variables which logs any `get`, `set` or `call` command. When you have compression enabled, it also prints debug logs about compression.
+
+Also when `debug: true` the lambda wont be minimized, so you can check the file `${options.lambda.buildDir}/${options.lambda.name}.js` to debug the webpack build
 
 ## Rationale for using the optimized handler by default
 
