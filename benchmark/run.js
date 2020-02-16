@@ -103,7 +103,7 @@ function createMarkdown (results) {
   let markdown = `
 # Benchmarks
 
-> :warning: The total times are measured without downloading & unzipping. Therefore these benchmarks only list _load/parse times_ and not _cold boot times_
+> :warning: The total times are measured without downloading & unzipping what normally occures on the AWS platform. Therefore these benchmarks only list _load/parse times_ and not _coldboot times_
 
 Check the benchmark folder for details how these benchmarks are created
 
@@ -115,7 +115,7 @@ Check the benchmark folder for details how these benchmarks are created
     for (const config in results[pathname]) {
       markdown += `### Config _${config}_\n`
 
-      markdown += '|handler|load time|exec time|total time|memory usage|res chksum|\n'
+      markdown += '|handler|load time|exec time|total time|memory usage|chksum|\n'
       markdown += '|---|---|---|---|---|---|\n'
 
       const responses = {}
@@ -127,16 +127,17 @@ Check the benchmark folder for details how these benchmarks are created
         const totalTime = prettyHrtime(result.boot + result.execute)
         const memUsage = prettyBytes(result.mem.rss)
 
-        const md5sum = crypto.createHash('md5')
         const response = JSON.stringify(result.res, null, 2)
         responses[handler] = response
+
+        const md5sum = crypto.createHash('md5')
         md5sum.update(response)
 
         markdown += `|_${handler}_|${bootTime}|${execTime}|${totalTime}|${memUsage}|${md5sum.digest('base64')}|\n`
       }
 
       for (const handler in responses) {
-        markdown += `<details><summary>Response for _${handler}_</summary>
+        markdown += `<details><summary>Response for <i>${handler}</i></summary>
 
 \`\`\`js
 ${responses[handler]}

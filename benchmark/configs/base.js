@@ -5,7 +5,7 @@ const rootDir = path.resolve(__dirname, '../../example')
 const baseConfig = require(`${rootDir}/nuxt.config.js`)
 
 export default {
-  ...baseConfig,
+  ...baseConfig.default,
   rootDir,
   render: {
     compressor: false,

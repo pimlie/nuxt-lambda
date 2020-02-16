@@ -7,6 +7,7 @@ export default {
     distDir: 'dist-with-etag'
   },
   render: {
+    compressor: false,
     etag: true
   }
 }
