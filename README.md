@@ -32,27 +32,11 @@ $ yarn add nuxt-lambda
 
 #### Configure (optional)
 
-See [Options](#Options) below
+See [Options](#options) below
 
-#### Build the lambda
-```js
-$ yarn nuxt-lambda <rootDir> [-c nuxt.config.js]
+#### Build & test
 
-// eg: yarn test-lambda src
-```
-
-It will by default create a `.lambda` dir in your rootDir containing the intermediates and a `dist` folder with the zip file you need to upload
-
-#### Test the lambda
-
-> Note: doesnt support custom lambda names yet
-
-```js
-$ yarn test-lambda <rootDir?> <url path>
-
-// eg: yarn test-lambda src /about
-// eg: yarn test-lambda /about
-```
+See [Commands](#commands)
 
 ## Commands
 
@@ -60,11 +44,19 @@ $ yarn test-lambda <rootDir?> <url path>
 
 The command to build a lambda. See `-h` for all available options (not all are supported).
 
+It will by default create a `.lambda` dir in your rootDir containing the intermediates and a `dist` folder with the zip file you need to upload
+
+```js
+$ yarn nuxt-lambda <rootDir> [-c nuxt.config.js]
+
+// eg: yarn test-lambda src
+```
+
 - `--handler`
 
 Same as `options.lambda.handler`, see [Options](#options). Used to quickly override the handler you want to use
 
-- `--no-config`
+- `--no-optimize`
 
 _Not supported yet_
 
@@ -85,6 +77,13 @@ _Not supported yet_
 The command to test a lambda. See `-h` for available options.
 
 Accepts either a path to a nuxt rootDir or a path to a packed lambda zip file.
+
+```js
+$ yarn test-lambda <rootDir?> <url path>
+
+// eg: yarn test-lambda src /about
+// eg: yarn test-lambda /about
+```
 
 - `-p`, `--persistent`
 
@@ -172,7 +171,7 @@ The name of your lambda, ie the zip will be named `<name>.zip`. Dont change this
 
 - `handler` (default: _connect_)
 
-Either `full`, `connect` or `minimal`. See [#available-handlers](available handlers)
+Either `full`, `connect` or `minimal`. See [available handlers](#available-handlers)
 
 - `buildDir` (default: _.lambda_)
 
