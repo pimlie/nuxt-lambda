@@ -1,4 +1,4 @@
-> :fire: This package is still under heavy development & testing, especially the minimal handler. We are also waiting for better support in Nuxt.js which should be available soon. Please expect an unstable API until v1
+> :fire: This package is still under heavy development & testing, especially the minimal handler. We are also waiting for improved support in Nuxt.js which should be available soon, after which this package will likely be transferred to the @nuxt namespace. Please expect an unstable API until v1
 
 # Nuxt command to create a Nuxt.js lambda (beta)
 [![npm version][npm-version-src]][npm-version-href]
@@ -154,9 +154,31 @@ Any additional webpack config that is needed for your lambda build. At the momen
 
 Please check [Benchmarks](./BENCHMARKS.md)
 
-#### Running the benchmarks
+#### Remarks about `/` page
 
-The benchmark command is located in `./benchmark/run.js`. It has one optional argument `--results` which can be used to point to a previous created results file instead running a new benchmark. Useful for markdown tweaking.
+This page uses the uuid plugin, which means its expected that checksums for the response are _never_ the same
+
+#### Remarks about `/about` page
+
+This page does a request to a 3rd pary API, differences in execution time are likely caused by variance in contacting this API
+
+#### Remarks about `/redirect` page
+
+`serverless-http` up to `v2.3.1` contains a [bug](https://github.com/dougmoscrop/serverless-http/pull/137) which causes Nuxt.js redirections to fail unless a previous header has been set
+
+### Running the benchmarks
+
+The benchmark command is located in `./benchmark/run.js`
+
+#### arguments
+
+- `--results <result.json>` (optional)
+
+Point to a previous created results file instead of running a new benchmark. Useful for markdown tweaking.
+
+- `--runs <num>`
+
+If you want to change the default number of runs (which is 3)
 
 ## Rationale for using the optimized handler by default
 
@@ -177,7 +199,7 @@ Having a single responsibility means less dependencies, less code to parse so qu
 
 More information about AWS cold starts in this excellent article by @MikhailShilkov: [Cold Starts in AWS Lambda](https://mikhail.io/serverless/coldstarts/aws/)
 
-### How does it work
+## How does it work
 
 In general the lambda build consists of 4 steps:
 

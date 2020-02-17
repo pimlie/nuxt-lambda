@@ -63,12 +63,12 @@ async function main () {
   if (argv.results) {
     results = require(path.resolve(argv.results))
   } else {
+    if (argv.runs) {
+      takeAverageOfRuns = parseInt(argv.runs) || takeAverageOfRuns
+    }
+
     results = await runBenchmarks()
     await fs.outputFile(path.resolve(__dirname, 'results.json'), JSON.stringify(results, null, 2), { encoding: 'utf8' })
-  }
-
-  if (argv.runs) {
-    takeAverageOfRuns = parseInt(argv.runs) || takeAverageOfRuns
   }
 
   const md = createMarkdown(results)
