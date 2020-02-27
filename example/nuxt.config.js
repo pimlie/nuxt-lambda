@@ -1,4 +1,7 @@
 export default {
+  lambda: {
+    handler: 'full'
+  },
   buildModules: [
     '@nuxtjs/axios'
   ],
