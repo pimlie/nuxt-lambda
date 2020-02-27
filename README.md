@@ -14,7 +14,7 @@ This command will by default create a lambda for Nuxt.js SSR that is optimized t
 - No connect server (it uses @nuxt/vue-renderer directly instead of going through @nuxt/server)
 - No support for runtime modules (only buildModules)
 - No support for server middlewares (although we might be able to add support for this at a later time)
-- No support for serving static files
+- No support for serving static files (there is optional support for the connect handler)
 - No support for hooks
 
 ### Possible tunables
@@ -177,6 +177,10 @@ This page does a request to a 3rd pary API, differences in execution time are li
 #### Remarks about `/redirect` page
 
 `serverless-http` up to `v2.3.1` contains a [bug](https://github.com/dougmoscrop/serverless-http/pull/137) which causes Nuxt.js redirections to fail unless a previous header has been set
+
+#### Remarks about `/nuxt-icon.png` file
+
+This file should only return a 200 for the full and connect handlers and the `with-static` config. The checksums wont be the same due to differences in last-modified times
 
 ### Running the benchmarks
 
