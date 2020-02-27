@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/pimlie/nuxt-lambda/compare/v0.3.0...v0.4.0) (2020-02-27)
+
+
+### Features
+
+* add support for (optionally) serving static files ([15076c1](https://github.com/pimlie/nuxt-lambda/commit/15076c1a84958b2d1e92e330e94275153169620d))
+
+
+### Bug Fixes
+
+* allow setting handler in nuxt.options again ([50c40c5](https://github.com/pimlie/nuxt-lambda/commit/50c40c5d2aee8372f02a1299485dea7eec982f30))
+
 ## [0.3.0](https://github.com/pimlie/nuxt-lambda/compare/v0.2.2...v0.3.0) (2020-02-16)
 
 
