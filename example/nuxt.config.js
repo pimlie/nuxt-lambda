@@ -1,4 +1,7 @@
 export default {
+  lambda: {
+    static: true
+  },
   buildModules: [
     '@nuxtjs/axios'
   ],
