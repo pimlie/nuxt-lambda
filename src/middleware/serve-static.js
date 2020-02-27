@@ -7,4 +7,3 @@ export default (app, { options }) => {
   app.use(serveStatic(r('static')))
   app.use(options.build.publicPath, serveStatic(r(options.clientDir)))
 }
-
