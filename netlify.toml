@@ -4,6 +4,7 @@
   functions = "example/dist"
   publish = "example/dist-static/"
 
+# This redirect is broken in Netlify
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/nuxt"

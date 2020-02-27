@@ -19,7 +19,8 @@ let takeAverageOfRuns = 3
 const configs = [
   'base',
   'with-compression',
-  'with-etag'
+  'with-etag',
+  'with-static'
 ]
 
 const handlers = [
@@ -31,7 +32,8 @@ const handlers = [
 const paths = [
   '/',
   '/about',
-  '/redirect'
+  '/redirect',
+  '/nuxt-icon.png'
 ]
 
 function setBuildArgv ({ config, handler, buildNuxt }) {
@@ -178,7 +180,7 @@ Check the benchmark folder for details how these benchmarks are created
         markdown += `<details><summary>Response for <i>${handler}</i></summary>
 
 \`\`\`js
-${responses[handler]}
+${responses[handler].length > 4000 ? 'blob_with_size_' + responses[handler].length : responses[handler]}
 \`\`\`
 </details>
 

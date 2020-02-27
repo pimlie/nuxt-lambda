@@ -14,7 +14,7 @@ This command will by default create a lambda for Nuxt.js SSR that is optimized t
 - No connect server (it uses @nuxt/vue-renderer directly instead of going through @nuxt/server)
 - No support for runtime modules (only buildModules)
 - No support for server middlewares (although we might be able to add support for this at a later time)
-- No support for serving static files (eg use Netlify if you want to deploy quickly)
+- No support for serving static files
 - No support for hooks
 
 ### Possible tunables
@@ -54,6 +54,10 @@ $ yarn nuxt-lambda <rootDir> [-c nuxt.config.js]
 - `--handler`
 
 Same as `options.lambda.handler`, see [Options](#options). Used to quickly override the handler you want to use
+
+- `--static`
+
+Same as `options.lambda.static`, see [Options](#options). Used to quickly override whether to enable support for serving static files or not
 
 - `--no-optimize`
 
@@ -146,6 +150,14 @@ The name of the folder where the zipped lambda will be saved. If relative then r
 
 This is intended to be an override when you are using universal mode but have some single pages running as SPA. In essence it will _not_ optimize the lambda by removing SPA-only features
 
+- `static` (default: _false_)
+
+If true then full support for serving static files from `nuxt.options.dir.static` will also be added to the lambda.
+
+For the full handler this means the serve-static middleware can resolve all static files
+For the connect handler the serve-static middleware is added to handle static file loading (but only when `static: true`)
+For the minimal handler this option only adds the files, so you probably shouldnt use this (there is no safeguard though)
+
 - `webpack` (default: _null_)
 
 Any additional webpack config that is needed for your lambda build. At the moment it doesnt make really sense to touch this
@@ -218,11 +230,14 @@ Eg just parsing/loading the `consola` dependency takes up to 10ms. Do we really 
 
 > This of course could break your code if you use non-standard log functions. Eg we have to set `render.ssrLog: false` because otherwise Nuxt.js will try to add a consola reporter
 
+## Notice about running nuxt-lambda as Netlify function
+
+At the moment you cant both deploy static files and use a Netlify function as fallback for serving SSR routes due to a redirect issue on their platform. The issue causes your Nuxt function (often, but not always) to be preferred instead of the static files. Meaning that if you dont serve your static file _also_ with your lambda you will get 404's
+
 ## TODO
 
-- [ ] (optimized handler only) Test which features have been broken (please report them!)
-- [ ] (optimized handler only) Make/test mode: SPA work
-- [ ] (optimized handler only) Add support for serverMiddleware's back by just chaining them manually?
+- [ ] (minimal handler) Improve feature testing
+- [ ] (minimal/connect handler) Allow additional middleware's
 - [ ] (maybe) Try to pack `vue-server-renderer` in a single file (less files could be faster unzipping?)
 - [ ] (maybe) Provide Nuxt.js lambdas as AWS layers (we'd need to remove the stubbing and just use optional requires instead)
    - Then users really only have to deploy their `.nuxt/dist` folder
