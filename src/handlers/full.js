@@ -11,6 +11,8 @@ const fullHandler = async (req, res) => {
 
   await nuxt.ready()
 
+  res.setHeader('Served by', 'nuxt-lambda')
+
   return nuxt.server.app(req, res)
 }
 
