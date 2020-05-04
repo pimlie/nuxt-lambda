@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.3](https://github.com/pimlie/nuxt-lambda/compare/v0.4.2...v0.4.3) (2020-05-04)
+
+
+### Bug Fixes
+
+* add bracket syntax for replacing consola ([36c270a](https://github.com/pimlie/nuxt-lambda/commit/36c270ab499124102727a8fadc46d32591aa628b))
+
 ### [0.4.2](https://github.com/pimlie/nuxt-lambda/compare/v0.4.1...v0.4.2) (2020-04-06)
 
 
