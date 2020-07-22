@@ -6,6 +6,7 @@ export function initVueRenderer () {
   fixConfig(options)
 
   const nuxt = {
+    options,
     hook: () => {},
     callHook: () => {}
   }
