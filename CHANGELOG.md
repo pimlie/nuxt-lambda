@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.4](https://github.com/pimlie/nuxt-lambda/compare/v0.4.3...v0.4.4) (2020-09-03)
+
+
+### Bug Fixes
+
+* add better stub for consola ([73629b3](https://github.com/pimlie/nuxt-lambda/commit/73629b34497a13215402026d4d1d32f696684b0a))
+* **renderer:** provide `nuxt.options` ([3e90db7](https://github.com/pimlie/nuxt-lambda/commit/3e90db7d13e2402b8da2ae52061a8dae53115da7))
+* **renderer:** provide `nuxt.options` ([1fccb1c](https://github.com/pimlie/nuxt-lambda/commit/1fccb1c1e91ecf3a358da464bc26b9aa4bf99ec0))
+
 ### [0.4.3](https://github.com/pimlie/nuxt-lambda/compare/v0.4.2...v0.4.3) (2020-05-04)
 
 
