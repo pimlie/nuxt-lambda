@@ -1,6 +1,7 @@
 export default {
   lambda: {
-    static: true
+    static: true,
+    excludeClientFiles: ['img/']
   },
   buildModules: [
     '@nuxtjs/axios'

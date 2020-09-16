@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <img src="~/assets/nuxt-square.svg" style="height: 50px" />
     <h1>About from {{ name }}</h1>
     <ul>
       <li v-for="(post, index) in posts" :key="index">

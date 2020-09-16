@@ -158,6 +158,29 @@ For the full handler this means the serve-static middleware can resolve all stat
 For the connect handler the serve-static middleware is added to handle static file loading (but only when `static: true`)
 For the minimal handler this option only adds the files, so you probably shouldnt use this (there is no safeguard though)
 
+- `excludeClientFiles` (default: _undefined_)
+
+Used to exclude certain assets from Nuxt's dist/client directory to be included in the Nuxt lambda zip file. Useful when you are combining your lambda with a static file deployment and are using image, video etc assets in your application. Those assets dont need to be included in the lambda zip file when you also deploy all your client files statically already.
+
+Can either be an array of paths or a function. If an array then each file from the `.nuxt/dist/client` folder is only added when they don't start with the given path. We only support startsWith for now because this feature should be used in conjunction with Nuxt's `build.filenames` property to move certain file types to a specific subfolder
+
+If a function is provided it receives the relative path to the client folder as first argument, and the full (absolute) filename as second argument
+
+Example
+```js
+// nuxt.config.js
+  build: {
+    filenames: {
+      img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[contenthash:7].[ext]',
+    }
+  },
+  lambda: {
+    excludeClientFiles: ['img/'],
+    // or
+    excludeClientFiles: clientAssetPath => !clientAssetPath.startsWith('img/'),
+  }
+```
+
 - `webpack` (default: _null_)
 
 Any additional webpack config that is needed for your lambda build. At the moment it doesnt make really sense to touch this
