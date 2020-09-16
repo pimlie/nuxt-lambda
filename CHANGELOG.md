@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/pimlie/nuxt-lambda/compare/v0.5.0...v0.5.1) (2020-09-16)
+
+
+### Bug Fixes
+
+* by default always add files to zip (duh) ([30c08ac](https://github.com/pimlie/nuxt-lambda/commit/30c08aca7426feebd013b700a9c6dca85d5c6d3a))
+
 ## [0.5.0](https://github.com/pimlie/nuxt-lambda/compare/v0.4.4...v0.5.0) (2020-09-16)
 
 
