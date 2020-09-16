@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/pimlie/nuxt-lambda/compare/v0.4.4...v0.5.0) (2020-09-16)
+
+
+### Features
+
+* add excludeClientFiles option to exclude assets from the nuxt lambda ([9c5494e](https://github.com/pimlie/nuxt-lambda/commit/9c5494e3232b924a97f8bad1a752dce777b3134c))
+
 ### [0.4.4](https://github.com/pimlie/nuxt-lambda/compare/v0.4.3...v0.4.4) (2020-09-03)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "nuxt-lambda",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "description": "Nuxt.js command to quickly & easily create an optimized lambda",
   "repository": "pimlie/nuxt-lambda",
   "license": "MIT",
