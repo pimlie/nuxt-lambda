@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.2](https://github.com/pimlie/nuxt-lambda/compare/v0.5.1...v0.5.2) (2020-09-22)
+
+
+### Features
+
+* add support for excludeFiles config ([6ada5de](https://github.com/pimlie/nuxt-lambda/commit/6ada5de4cd50ac61856761109bd51d3d0d5c275a))
+
 ### [0.5.1](https://github.com/pimlie/nuxt-lambda/compare/v0.5.0...v0.5.1) (2020-09-16)
 
 
