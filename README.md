@@ -181,6 +181,25 @@ Example
   }
 ```
 
+- `excludeFiles` (default: _undefined_)
+
+Similar to `excludeClientFiles` but can be used to also filter server files. Recieves the file path related from `.nuxt`.
+
+Example
+```js
+// nuxt.config.js
+  build: {
+    filenames: {
+      img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[contenthash:7].[ext]',
+    }
+  },
+  lambda: {
+    excludeFiles: ['dist/client/img/'], // same as excludeClientFiles example above
+    // or
+    excludeFiles: filePath => filePath.endsWith('.map'), // ignore all sourcemaps
+  }
+```
+
 - `webpack` (default: _null_)
 
 Any additional webpack config that is needed for your lambda build. At the moment it doesnt make really sense to touch this
