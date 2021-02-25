@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.4](https://github.com/pimlie/nuxt-lambda/compare/v0.5.3...v0.5.4) (2021-02-25)
+
+
+### Bug Fixes
+
+* chore update dependencies ([3237a69](https://github.com/pimlie/nuxt-lambda/commit/3237a690624e5a6b6935a6397ead336ece49c223))
+
 ### [0.5.3](https://github.com/pimlie/nuxt-lambda/compare/v0.5.2...v0.5.3) (2020-09-23)
 
 
