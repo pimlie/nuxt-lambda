@@ -1,4 +1,5 @@
 export default {
+  telemetry: false,
   lambda: {
     static: true,
     excludeClientFiles: ['img/']

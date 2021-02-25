@@ -1,13 +1,17 @@
 import generateETag from 'etag'
 import fresh from 'fresh'
 // import consola from 'consola'
+import { normalizeURL } from 'ufo'
+
+const consola = console // eslint-disable-line no-console
+// import { getContext, TARGETS } from '@nuxt/utils'
 
 export default ({ options, nuxt, renderRoute, resources }) => async function nuxtMiddleware (req, res, next) {
   // Get context
-  const context = { req, res }
+  const context = { req, res } // getContext(req, res)
 
   try {
-    const url = decodeURI(req.url)
+    const url = normalizeURL(req.url)
     res.statusCode = 200
     const result = await renderRoute(url, context)
 
@@ -26,12 +30,20 @@ export default ({ options, nuxt, renderRoute, resources }) => async function nux
       preloadFiles
     } = result
 
-    if (redirected) {
+    if (redirected /* && context.target !== TARGETS.static */) {
       await nuxt.callHook('render:routeDone', url, result, context)
       return html
     }
     if (error) {
       res.statusCode = context.nuxt.error.statusCode || 500
+    }
+
+    if (options.render.csp && cspScriptSrcHashes) {
+      const { allowedSources, policies } = options.render.csp
+      const isReportOnly = !!options.render.csp.reportOnly
+      const cspHeader = isReportOnly ? 'Content-Security-Policy-Report-Only' : 'Content-Security-Policy'
+
+      res.setHeader(cspHeader, getCspString({ cspScriptSrcHashes, allowedSources, policies, isReportOnly }))
     }
 
     // Add ETag header
@@ -40,6 +52,7 @@ export default ({ options, nuxt, renderRoute, resources }) => async function nux
       const etag = hash ? hash(html, options.render.etag) : generateETag(html, options.render.etag)
       if (fresh(req.headers, { etag })) {
         res.statusCode = 304
+        await nuxt.callHook('render:beforeResponse', url, result, context)
         res.end()
         await nuxt.callHook('render:routeDone', url, result, context)
         return
@@ -66,24 +79,17 @@ export default ({ options, nuxt, renderRoute, resources }) => async function nux
       }
     }
 
-    if (options.render.csp && cspScriptSrcHashes) {
-      const { allowedSources, policies } = options.render.csp
-      const cspHeader = options.render.csp.reportOnly ? 'Content-Security-Policy-Report-Only' : 'Content-Security-Policy'
-
-      res.setHeader(cspHeader, getCspString({ cspScriptSrcHashes, allowedSources, policies, isDev: options.dev }))
-    }
-
     // Send response
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
     res.setHeader('Accept-Ranges', 'none') // #3870
     res.setHeader('Content-Length', Buffer.byteLength(html))
+    await nuxt.callHook('render:beforeResponse', url, result, context)
     res.end(html, 'utf8')
     await nuxt.callHook('render:routeDone', url, result, context)
     return html
   } catch (err) {
     if (context && context.redirected) {
-      // eslint-disable-next-line no-console
-      console.error(err)
+      consola.error(err)
       return err
     }
 
@@ -96,8 +102,7 @@ export default ({ options, nuxt, renderRoute, resources }) => async function nux
 
 const defaultPushAssets = (preloadFiles, shouldPush, publicPath, options) => {
   if (shouldPush && options.dev) {
-    // eslint-disable-next-line no-console
-    console.warn('http2.shouldPush is deprecated. Use http2.pushAssets function')
+    consola.warn('http2.shouldPush is deprecated. Use http2.pushAssets function')
   }
 
   const links = []
@@ -112,7 +117,7 @@ const defaultPushAssets = (preloadFiles, shouldPush, publicPath, options) => {
       return
     }
 
-    const { crossorigin } = options.build
+    const { crossorigin } = options.render
     const cors = `${crossorigin ? ` crossorigin=${crossorigin};` : ''}`
     // `modulepreload` rel attribute only supports script-like `as` value
     // https://html.spec.whatwg.org/multipage/links.html#link-type-modulepreload
@@ -123,20 +128,18 @@ const defaultPushAssets = (preloadFiles, shouldPush, publicPath, options) => {
   return links
 }
 
-const getCspString = ({ cspScriptSrcHashes, allowedSources, policies, isDev }) => {
+const getCspString = ({ cspScriptSrcHashes, allowedSources, policies, isReportOnly }) => {
   const joinedHashes = cspScriptSrcHashes.join(' ')
-  const baseCspStr = `script-src 'self'${isDev ? ' \'unsafe-eval\'' : ''} ${joinedHashes}`
+  const baseCspStr = `script-src 'self' ${joinedHashes}`
+  const policyObjectAvailable = typeof policies === 'object' && policies !== null && !Array.isArray(policies)
 
   if (Array.isArray(allowedSources) && allowedSources.length) {
-    return `${baseCspStr} ${allowedSources.join(' ')}`
+    return isReportOnly && policyObjectAvailable && !!policies['report-uri'] ? `${baseCspStr} ${allowedSources.join(' ')}; report-uri ${policies['report-uri']};` : `${baseCspStr} ${allowedSources.join(' ')}`
   }
-
-  const policyObjectAvailable = typeof policies === 'object' && policies !== null && !Array.isArray(policies)
 
   if (policyObjectAvailable) {
     const transformedPolicyObject = transformPolicyObject(policies, cspScriptSrcHashes)
-
-    return Object.entries(transformedPolicyObject).map(([k, v]) => `${k} ${v.join(' ')}`).join('; ')
+    return Object.entries(transformedPolicyObject).map(([k, v]) => `${k} ${Array.isArray(v) ? v.join(' ') : v}`).join('; ')
   }
 
   return baseCspStr
