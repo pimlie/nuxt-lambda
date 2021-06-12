@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.6](https://github.com/pimlie/nuxt-lambda/compare/v0.5.5...v0.5.6) (2021-06-12)
+
+
+### Features
+
+* add decode option to test-lambda to return plain html ([c94eee0](https://github.com/pimlie/nuxt-lambda/commit/c94eee0d434aa5d72d91a74819b4477cc79d388f))
+
+
+### Bug Fixes
+
+* replace routePath in nuxt context ([2b8bdd2](https://github.com/pimlie/nuxt-lambda/commit/2b8bdd27d23c667020214855fdb9dd9c10650eee))
+
 ### [0.5.5](https://github.com/pimlie/nuxt-lambda/compare/v0.5.4...v0.5.5) (2021-06-12)
 
 
