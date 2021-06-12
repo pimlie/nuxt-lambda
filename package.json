@@ -23,30 +23,30 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@netlify/zip-it-and-ship-it": "^2.3.0",
+    "@netlify/zip-it-and-ship-it": "^4.3.0",
     "consola": "^2.15.3",
     "deepmerge": "^4.2.2",
-    "fs-extra": "^9.1.0",
+    "fs-extra": "^10.0.0",
     "jszip": "^3.6.0",
     "klaw": "^3.0.0",
     "serverless-http": "^2.7.0",
     "temp": "^0.9.4",
-    "webpack-merge": "^5.7.3",
-    "webpack-node-externals": "^2.5.2",
+    "webpack-merge": "^5.8.0",
+    "webpack-node-externals": "^3.0.0",
     "webpack-plugin-replace": "^1.2.0"
   },
   "devDependencies": {
-    "@nuxtjs/axios": "^5.13.1",
-    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/eslint-config": "^6.0.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.20.0",
+    "eslint": "^7.28.0",
     "minimist": "^1.2.5",
-    "nuxt": "^2.15.2",
-    "standard-version": "^9.1.1",
+    "nuxt": "^2.15.6",
+    "standard-version": "^9.3.0",
     "vue-uuid": "^2.0.2"
   },
   "peerDependencies": {
-    "nuxt": "^2.15.2"
+    "nuxt": "^2.15.6"
   },
   "publishConfig": {
     "access": "public"
