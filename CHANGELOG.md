@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.5](https://github.com/pimlie/nuxt-lambda/compare/v0.5.4...v0.5.5) (2021-06-12)
+
+
+### Features
+
+* add support for rendering error page on internal server error ([8a33241](https://github.com/pimlie/nuxt-lambda/commit/8a33241af126a13fb5dcedf0ccc5fb060479209b))
+
+
+### Bug Fixes
+
+* upgrade to @babel/eslint-parser ([966133b](https://github.com/pimlie/nuxt-lambda/commit/966133b537fefc194121d9ca870a9b78040dd5fd))
+
 ### [0.5.4](https://github.com/pimlie/nuxt-lambda/compare/v0.5.3...v0.5.4) (2021-02-25)
 
 
