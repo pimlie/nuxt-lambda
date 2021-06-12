@@ -1,5 +1,3 @@
-> :fire: This package is still under heavy development & testing, especially the minimal handler. We are also waiting for improved support in Nuxt.js which should be available soon, after which this package will likely be transferred to the @nuxt namespace. Please expect an unstable API until v1
-
 # Nuxt command to create a Nuxt.js lambda (beta)
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
