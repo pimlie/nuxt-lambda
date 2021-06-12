@@ -1,5 +1,6 @@
 import generateETag from 'etag'
 import fresh from 'fresh'
+import devalue from 'devalue'
 // import consola from 'consola'
 import { normalizeURL } from 'ufo'
 
@@ -19,8 +20,15 @@ export default ({ options, nuxt, renderRoute, resources }) => async function nux
       result = await renderRoute(url, context)
     } catch (err) {
       if (options.lambda.errorPage) {
-        context.renderError = err
         result = await renderRoute(options.lambda.errorPage, context)
+
+        // If the error page was rendered correctly, replace the route in the nuxt context
+        if (result && result.html) {
+          const escapedErrorUrl = devalue(options.lambda.errorPage)
+          const escapedSrcUrl = devalue(url)
+
+          result.html = result.html.replace(`routePath:${escapedErrorUrl}`, `routePath:${escapedSrcUrl}`)
+        }
       } else {
         throw err
       }
