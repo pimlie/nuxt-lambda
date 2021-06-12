@@ -13,7 +13,18 @@ export default ({ options, nuxt, renderRoute, resources }) => async function nux
   try {
     const url = normalizeURL(req.url)
     res.statusCode = 200
-    const result = await renderRoute(url, context)
+
+    let result
+    try {
+      result = await renderRoute(url, context)
+    } catch (err) {
+      if (options.lambda.errorPage) {
+        context.renderError = err
+        result = await renderRoute(options.lambda.errorPage, context)
+      } else {
+        throw err
+      }
+    }
 
     // If result is falsy, call renderLoading
     if (!result) {
