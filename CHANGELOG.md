@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.7](https://github.com/pimlie/nuxt-lambda/compare/v0.5.6...v0.5.7) (2021-09-28)
+
+
+### Features
+
+* improve modern build support ([c36ac08](https://github.com/pimlie/nuxt-lambda/commit/c36ac082b16bfff2d4e82c9ca2f3ca64c884c4e1))
+
 ### [0.5.6](https://github.com/pimlie/nuxt-lambda/compare/v0.5.5...v0.5.6) (2021-06-12)
 
 
