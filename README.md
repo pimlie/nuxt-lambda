@@ -156,6 +156,10 @@ For the full handler this means the serve-static middleware can resolve all stat
 For the connect handler the serve-static middleware is added to handle static file loading (but only when `static: true`)
 For the minimal handler this option only adds the files, so you probably shouldnt use this (there is no safeguard though)
 
+- `zisi` (default: _undefined_)
+
+Options passed to zisi. See [@netlify/zip-it-and-ship-it](https://github.com/netlify/zip-it-and-ship-it)
+
 - `excludeClientFiles` (default: _undefined_)
 
 Used to exclude certain assets from Nuxt's dist/client directory to be included in the Nuxt lambda zip file. Useful when you are combining your lambda with a static file deployment and are using image, video etc assets in your application. Those assets dont need to be included in the lambda zip file when you also deploy all your client files statically already.
