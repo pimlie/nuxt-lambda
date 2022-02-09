@@ -23,7 +23,7 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@netlify/zip-it-and-ship-it": "^4.23.2",
+    "@netlify/zip-it-and-ship-it": "^5.7.4",
     "consola": "^2.15.3",
     "deepmerge": "^4.2.2",
     "fs-extra": "^10.0.0",
@@ -36,13 +36,13 @@
     "webpack-plugin-replace": "^1.2.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.15.7",
+    "@babel/eslint-parser": "^7.17.0",
     "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/eslint-config": "^6.0.1",
-    "eslint": "^7.32.0",
+    "@nuxtjs/eslint-config": "^8.0.0",
+    "eslint": "^8.8.0",
     "minimist": "^1.2.5",
     "nuxt": "^2.15.8",
-    "standard-version": "^9.3.1",
+    "standard-version": "^9.3.2",
     "vue-uuid": "^2.0.2"
   },
   "peerDependencies": {
